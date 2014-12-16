@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/assets"><file name="fonts/DroidSerif-BoldItalic.ttf" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/assets/fonts/DroidSerif-BoldItalic.ttf"/></source></dataSet><dataSet config="debug"><source path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/debug/assets"/></dataSet></merger>

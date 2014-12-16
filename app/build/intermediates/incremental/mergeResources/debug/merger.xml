@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res"><file name="main" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/menu/main.xml" qualifiers="" type="menu"/><file name="ic_launcher" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable-xxhdpi/ic_launcher.png" qualifiers="xxhdpi-v4" type="drawable"/><file path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values-v11/styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values-v14/styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file><file path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values-w820dp/dimens.xml" qualifiers="w820dp-v13"><dimen name="activity_horizontal_margin">64dp</dimen></file><file name="shadow_app_pure_white_left_right_bottom" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/shadow_app_pure_white_left_right_bottom.xml" qualifiers="" type="drawable"/><file name="icon" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/icon.png" qualifiers="" type="drawable"/><file name="splashicon" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/splashicon.png" qualifiers="" type="drawable"/><file name="addwater" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/addwater.png" qualifiers="" type="drawable"/><file name="glass_first" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/glass_first.png" qualifiers="" type="drawable"/><file name="glass_two" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/glass_two.png" qualifiers="" type="drawable"/><file name="glass_three" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/glass_three.png" qualifiers="" type="drawable"/><file name="workout_on" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/workout_on.png" qualifiers="" type="drawable"/><file name="drawer_icon" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/drawer_icon.png" qualifiers="" type="drawable"/><file name="glass_fifth" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/glass_fifth.png" qualifiers="" type="drawable"/><file name="hotday_off" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/hotday_off.png" qualifiers="" type="drawable"/><file name="glass_four" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/glass_four.png" qualifiers="" type="drawable"/><file name="notifyicon" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/notifyicon.png" qualifiers="" type="drawable"/><file name="workout_off" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/workout_off.png" qualifiers="" type="drawable"/><file name="rounded_corner" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/rounded_corner.xml" qualifiers="" type="drawable"/><file name="horizontal_progress_bar" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/horizontal_progress_bar.xml" qualifiers="" type="drawable"/><file name="weightedit" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/weightedit.png" qualifiers="" type="drawable"/><file name="notification_icon" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/notification_icon.png" qualifiers="" type="drawable"/><file name="hotday_on" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/hotday_on.png" qualifiers="" type="drawable"/><file name="rounded_corner_addbutton" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/rounded_corner_addbutton.xml" qualifiers="" type="drawable"/><file name="notification_off" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/notification_off.png" qualifiers="" type="drawable"/><file name="notification_on" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/notification_on.png" qualifiers="" type="drawable"/><file name="appicon" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable/appicon.png" qualifiers="" type="drawable"/><file name="list_v" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/list_v.xml" qualifiers="" type="layout"/><file name="activity_main" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/activity_main.xml" qualifiers="" type="layout"/><file name="navigation_bar" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/navigation_bar.xml" qualifiers="" type="layout"/><file name="single_choice_item" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/single_choice_item.xml" qualifiers="" type="layout"/><file name="body_mass_index_range" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/body_mass_index_range.xml" qualifiers="" type="layout"/><file name="about" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/about.xml" qualifiers="" type="layout"/><file name="feedback" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/feedback.xml" qualifiers="" type="layout"/><file name="statistics" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/statistics.xml" qualifiers="" type="layout"/><file name="splash" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/splash.xml" qualifiers="" type="layout"/><file name="sqlview" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/sqlview.xml" qualifiers="" type="layout"/><file name="height_weight_input" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/height_weight_input.xml" qualifiers="" type="layout"/><file path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values/dimens.xml" qualifiers=""><dimen name="activity_vertical_margin">16dp</dimen><dimen name="activity_horizontal_margin">16dp</dimen></file><file path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values/strings.xml" qualifiers=""><string name="hello_world">Hello world!</string><string name="action_settings">Settings</string><string name="drawer_close"/><string name="app_name">Water Balance</string><string-array name="planets">
+        <item>Home</item>
+        <item>Drink Log</item>
+        <item>Statistics</item>
+        <item>About</item>
+        <item>Feedback</item>
+    </string-array><string-array name="planets_feedback">
+        <item>Home</item>
+        <item>Drink Log</item>
+        <item>Statistics</item>
+        <item>About</item>
+    </string-array><string-array name="weight_dropdown">
+        <item>kg</item>
+        <item>lbs</item>
+    </string-array><string-array name="planets_statistics">
+        <item>Home</item>
+        <item>Drink Log</item>
+        <item>About</item>
+        <item>Feedback</item>
+    </string-array><string name="drawer_open"/><string-array name="planets_about">
+        <item>Home</item>
+        <item>Drink Log</item>
+        <item>Statistics</item>
+        <item>Feedback</item>
+    </string-array><string-array name="planets_drinklog">
+        <item>Home</item>
+        <item>Statistics</item>
+        <item>About</item>
+        <item>Feedback</item>
+    </string-array><string-array name="height_dropdown">
+        <item>cm</item>
+        <item>ft-in</item>
+    </string-array></file><file path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values/styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style><style name="AppThemeNoBar" parent="android:Theme.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTitleSize">0dp</item>
+    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style></file><file path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values/colors.xml" qualifiers=""><color name="app_pure_white">#ffffff</color><color name="app_dark_gray">#D3D3D3</color><color name="black">#000000</color></file><file name="ic_launcher" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable-hdpi/ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable-mdpi/ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/drawable-xhdpi/ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/></source><source path="/home/shubham/AndroidstudioProjects/WaterBalance/app/build/generated/res/rs/debug"/><source path="/home/shubham/AndroidstudioProjects/WaterBalance/app/build/generated/res/generated/debug"/></dataSet><dataSet config="debug"><source path="/home/shubham/AndroidstudioProjects/WaterBalance/app/src/debug/res"/></dataSet><mergedItems/></merger>
