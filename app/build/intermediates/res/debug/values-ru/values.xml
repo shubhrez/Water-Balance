@@ -1,5 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values-ru/strings.xml -->
+    <eat-comment/>
+    <string-array name="height_dropdown">
+        <item>cm</item>
+        <item>ft-in</item>
+    </string-array>
+    <string-array name="planets">
+        <item>домой</item>
+        <item>напиток регистрировать</item>
+        <item>статистика</item>
+        <item>около</item>
+        <item>обратная связь</item>
+    </string-array>
+    <string-array name="planets_about">
+        <item>домой</item>
+        <item>напиток регистрировать</item>
+        <item>статистика</item>
+        <item>обратная связь</item>
+    </string-array>
+    <string-array name="planets_drinklog">
+        <item>домой</item>
+        <item>статистика</item>
+        <item>около</item>
+        <item>обратная связь</item>
+    </string-array>
+    <string-array name="planets_feedback">
+        <item>домой</item>
+        <item>напиток регистрировать</item>
+        <item>статистика</item>
+        <item>около</item>
+    </string-array>
+    <string-array name="planets_statistics">
+        <item>домой</item>
+        <item>напиток регистрировать</item>
+        <item>около</item>
+        <item>обратная связь</item>
+    </string-array>
+    <string-array name="weight_dropdown">
+        <item>kg</item>
+        <item>lb</item>
+    </string-array>
+    <string name="action_settings">Settings</string>
+    <string name="adjustHotdayWorkout">Отрегулируйте напиток цель, нажав горячей день и тренировка кнопка</string>
+    <string name="app_name">Водный баланс</string>
+    <string name="benefit_tip">Преимущества и Советы</string>
+    <string name="bmiidealweight">Ваш вес Нормаль-в пределах лимитов,</string>
+    <string name="bmiobese">Предупреждение: вы ожирением - Снижение веса</string>
+    <string name="bmioverweight">Вы с лишним весом - Снижение веса</string>
+    <string name="bmiunderweight">Вы под тяжестью - увеличение веса</string>
+    <string name="bodyMassIndex">тело масса индекс  :</string>
+    <string name="clickAddWater">нажмите \'+ \' для записи воды пьян</string>
     <!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values-ru/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Требуется обновить приложение Android Wear."</string>
@@ -30,4 +81,36 @@
     <string msgid="411506735369601515" name="common_open_on_phone">"Открыть на телефоне"</string>
     <string msgid="9071884888741449141" name="common_signin_button_text">"Войти"</string>
     <string msgid="2429381841831957106" name="common_signin_button_text_long">"Войти в аккаунт Google"</string>
+    <!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values-ru/strings.xml -->
+    <eat-comment/>
+    <string name="description">Водный баланс помогает вам контролировать ежедневное потребление воды и обеспечивает уведомления, чтобы напомнить вам выпить water.It также обеспечивает ваш индекс массы тела, чтобы сохранить чек на ваш вес.</string>
+    <string name="drawer_close"/>
+    <string name="drawer_open"/>
+    <string name="drinkLogDate">дата</string>
+    <string name="drinkLogintaketarget">Водозабор / Target</string>
+    <string name="drinktarget">напиток цель</string>
+    <string name="feedback">Обратная связь:</string>
+    <string name="feedback_name">Имя:</string>
+    <string name="feedback_subject">Тема:</string>
+    <string name="hotday">горячей день</string>
+    <string name="noentry">Не нет записей</string>
+    <string name="sendmail">Отправить на e-mail</string>
+    <string name="statistics_intake">Средняя суточная доза воды</string>
+    <string name="statistics_range">Ваш идеальный вес Range</string>
+    <string name="statistics_target">Средний дневной напиток Target</string>
+    <string name="statistics_weight">Ваш текущий вес</string>
+    <string name="tip1">Регулирует температуру тела</string>
+    <string name="tip2">Снимает усталость</string>
+    <string name="tip3">Помогает в пищеварении и запорах</string>
+    <string name="tip4">Способствует здоровой кожи</string>
+    <string name="tip5">Приливы токсины</string>
+    <string name="tip6">Потеря СПИД Вес</string>
+    <string name="tip7">Oxigenates крови и легких</string>
+    <string name="title">Водный баланс</string>
+    <string name="titleAbout">около</string>
+    <string name="titleDrinkLog">напиток регистрировать</string>
+    <string name="titleFeedback">обратная связь</string>
+    <string name="titleHome">домой</string>
+    <string name="titleStatistics">статистика</string>
+    <string name="workout">тренировка</string>
 </resources>

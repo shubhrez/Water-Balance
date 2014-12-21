@@ -24,7 +24,7 @@ public class Splash extends Activity {
 		ActionBar bar = getActionBar();
 		bar.hide();
 		setContentView(R.layout.splash);
-		Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/DroidSerif-BoldItalic.ttf");
+		Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Dosis-SemiBold.ttf");
 		label = (TextView) findViewById(R.id.label);
 		label.setTypeface(custom_font);
 		icon = (ImageView) findViewById(R.id.icon);

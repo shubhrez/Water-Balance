@@ -15,8 +15,8 @@
     
     />
  <TextView 
-     android:text="Water Balance" 
-     android:textSize="35dp"
+     android:text="@string/title"
+     android:textSize="50dp"
      android:id="@+id/label"
      android:textStyle="bold|italic"
      android:layout_width="fill_parent" 

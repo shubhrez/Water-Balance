@@ -13,8 +13,7 @@
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-        	android:textColor="#00B2FF"   
-            android:textSize="18dp"
+            android:textSize="19dp"
             android:layout_weight="1"
             android:textStyle="italic"
             android:fontFamily="sans-serif-condensed"
@@ -27,12 +26,10 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif-medium"
             android:textStyle="italic"
-            android:textSize="18dp"
+            android:textSize="19dp"
             android:gravity="right"
-            android:paddingLeft="40dp"
-            android:textColor="#00B2FF"
+            android:paddingRight="10dp"
              />
-
 
 
 </LinearLayout>

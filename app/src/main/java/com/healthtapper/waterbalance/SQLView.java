@@ -13,6 +13,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -54,6 +55,7 @@ public class SQLView extends Activity implements OnItemClickListener{
 	TextView weight;
 	TextView intake;
 	ArrayList<HashMap<String, String>> oslist = new ArrayList<HashMap<String, String>>();
+    TextView dateText,intakevstargetText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -64,13 +66,19 @@ public class SQLView extends Activity implements OnItemClickListener{
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 		ActionBar bar = getActionBar();
-		bar.setTitle(Html.fromHtml("<font color='#000000'>Drink Log</font>"));
-		//bar.setTitle("Drink Log");
+        String title = getResources().getString(R.string.titleDrinkLog);
+        bar.setTitle(title);
+		//bar.setTitle(Html.fromHtml("<font color='#000000'>Drink Log</font>"));
 		bar.setIcon(R.drawable.icon);
 		bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00B2FF")));
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Dosis-SemiBold.ttf");
 		date = (TextView) findViewById(R.id.date);
 		weight = (TextView) findViewById(R.id.weight);
 		intake = (TextView) findViewById(R.id.intake);
+        dateText = (TextView) findViewById(R.id.datetext);
+        intakevstargetText = (TextView) findViewById(R.id.intakevstargettext);
+        dateText.setTypeface(custom_font);
+        intakevstargetText.setTypeface(custom_font);
 		list = (ListView) findViewById(R.id.list);
 		TextView emptyText = (TextView) findViewById(R.id.empty);
 		list.setEmptyView(emptyText);
@@ -155,12 +163,12 @@ public class SQLView extends Activity implements OnItemClickListener{
 		drawerListener.syncState();
 	}
 
-	@Override
-	protected void onPause() {
-		// TODO Auto-generated method stub
-		super.onPause();
-		finish();
-	}
+//	@Override
+//	protected void onPause() {
+//		// TODO Auto-generated method stub
+//		super.onPause();
+//		finish();
+//	}
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {

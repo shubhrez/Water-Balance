@@ -51,7 +51,6 @@
                     android:layout_marginBottom="10dp"
                     android:fontFamily="sans-serif-condensed"
                     android:text="0/0 ML"
-                    android:textColor="#00B2FF"
                     android:textSize="20dp" />
 
                 <TextView
@@ -62,8 +61,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_marginBottom="10dp"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Drink Target"
-                    android:textColor="#00B2FF"
+                    android:text="@string/drinktarget"
                     android:textSize="20dp" />
 
                 <ProgressBar
@@ -103,7 +101,7 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/adjustDrinkTargetText"
                     android:layout_width="fill_parent"
                     android:layout_height="70dp"
                     android:layout_alignTop="@+id/hotday_button"
@@ -113,27 +111,31 @@
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
                     android:textStyle="italic"
-                    android:text="Adjust drink target for hotday and workout by clicking buttons"
+                    android:text="@string/adjustHotdayWorkout"
                     android:textColor="#00B2FF"
-                    android:textSize="15dp" />
+                    android:textSize="17dp" />
 
                 <TextView
-                    android:layout_width="50dp"
+                    android:id="@+id/hotdayText"
+                    android:layout_width="60dp"
                     android:layout_height="20dp"
                     android:layout_alignLeft="@+id/hotday_button"
                     android:layout_below="@+id/workout_button"
                     android:gravity="center"
-                    android:text="HotDay"
-                    android:textSize="12dp" />
+                    android:textColor="#00B2FF"
+                    android:text="@string/hotday"
+                    android:textSize="15dp" />
 
                 <TextView
-                    android:layout_width="50dp"
+                    android:id="@+id/workoutText"
+                    android:layout_width="60dp"
                     android:layout_height="20dp"
                     android:layout_below="@+id/workout_button"
-                    android:layout_toRightOf="@+id/textView2"
+                    android:textColor="#00B2FF"
+                    android:layout_alignLeft="@+id/workout_button"
                     android:gravity="center"
-                    android:text="WorkOut"
-                    android:textSize="12dp" />
+                    android:text="@string/workout"
+                    android:textSize="15dp" />
             </RelativeLayout>
 
             <LinearLayout
@@ -158,13 +160,14 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/addWaterText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:textStyle="italic"
-                android:text="click &apos;+&apos; to record water drunk"
+                android:text="@string/clickAddWater"
                 android:textColor="#00B2FF"
                 android:textSize="18dp" >
             </TextView>
@@ -188,27 +191,45 @@
                 android:paddingBottom="15dp"
                  >
 
+                <LinearLayout
+                    android:id="@+id/bmilayout"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/bodyMassIndexText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:gravity="right"
+                        android:text="@string/bodyMassIndex"
+                        android:layout_weight="35"
+                        android:textSize="20dp" />
+
                 <TextView
                     android:id="@+id/bmi"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
-                    android:gravity="center"
+                    android:paddingLeft="15dp"
                     android:text="1 "
-                    android:textColor="#00B2FF"
+                    android:layout_weight="65"
                     android:textSize="20dp" />
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/tip"
                     android:textStyle="italic"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/bmi"
-                    android:layout_marginTop="5dp"
                     android:fontFamily="sans-serif"
                     android:gravity="center"
-                    android:textColor="#00B2FF"
-                    android:textSize="16dp" />
+                    android:textSize="18dp"
+                    android:layout_below="@+id/bmilayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
 
 
             </RelativeLayout>
@@ -216,7 +237,7 @@
             <com.google.android.gms.ads.AdView
                 android:id="@+id/adView"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="65dp"
                 android:layout_centerHorizontal="true"
                 ads:adSize="BANNER"
                 android:layout_weight="1"

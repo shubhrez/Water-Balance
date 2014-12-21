@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -36,7 +37,7 @@ public class Statistics extends Activity implements OnItemClickListener {
 	private static final String TAG_WEIGHT = "weight";
 	private static final String TAG_INTAKE = "intake";
 	private static final String TAG_TARGET = "target";
-	TextView avIntake, avTarget, currentWeight, idealWeight;
+	TextView avIntake, avTarget, currentWeight, idealWeight,avIntakeText, avTargetText, currentWeightText, idealWeightText;
 	ArrayList<HashMap<String, String>> oslist = new ArrayList<HashMap<String, String>>();
 
 	private DrawerLayout drawerLayout;
@@ -49,20 +50,37 @@ public class Statistics extends Activity implements OnItemClickListener {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.statistics);
-        AdView mAdView = (AdView) this.findViewById(R.id.adViewDrinkLog);
+        AdView mAdView = (AdView) this.findViewById(R.id.adViewStatistics);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 		ActionBar bar = getActionBar();
-		bar.setTitle(Html.fromHtml("<font color='#000000'>Statistics</font>"));
+        String title = getResources().getString(R.string.titleStatistics);
+        bar.setTitle(title);
+		//bar.setTitle(Html.fromHtml("<font color='#000000'>Statistics</font>"));
 		// bar.setTitle("About");
 		bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00B2FF")));
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Dosis-SemiBold.ttf");
 
 		avIntake = (TextView) findViewById(R.id.avIntake);
 		avTarget = (TextView) findViewById(R.id.avTarget);
 		currentWeight = (TextView) findViewById(R.id.currentWeight);
 		idealWeight = (TextView) findViewById(R.id.idealWeight);
+        avIntakeText = (TextView) findViewById(R.id.avIntakeText);
+        avTargetText = (TextView) findViewById(R.id.avTargetText);
+        currentWeightText = (TextView) findViewById(R.id.currentWeightText);
+        idealWeightText = (TextView) findViewById(R.id.idealWeightText);
 
-		String[] columns = new String[] { KEY_DATE, KEY_WEIGHT, KEY_INTAKE,
+        avIntake.setTypeface(custom_font);
+        avIntakeText.setTypeface(custom_font);
+        avTarget.setTypeface(custom_font);
+        avTargetText.setTypeface(custom_font);
+        idealWeight.setTypeface(custom_font);
+        idealWeightText.setTypeface(custom_font);
+        currentWeight.setTypeface(custom_font);
+        currentWeightText.setTypeface(custom_font);
+
+
+        String[] columns = new String[] { KEY_DATE, KEY_WEIGHT, KEY_INTAKE,
 				KEY_TARGET };
 		WaterIntake info = new WaterIntake(this);
 		info.open();
@@ -198,11 +216,11 @@ public class Statistics extends Activity implements OnItemClickListener {
 		return true;
 	}
 
-    @Override
-    protected void onPause() {
-        // TODO Auto-generated method stub
-        super.onPause();
-        finish();
-    }
+//    @Override
+//    protected void onPause() {
+//        // TODO Auto-generated method stub
+//        super.onPause();
+//        finish();
+//    }
 
 }

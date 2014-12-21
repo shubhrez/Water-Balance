@@ -92,8 +92,15 @@
     <!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
+    <string name="adjustHotdayWorkout">Adjust drink target for hotday and workout by clicking buttons</string>
     <string name="app_name">Water Balance</string>
-    <string name="banner_ad_unit_id">ca-app-pub-5565024915704110/6264490384</string>
+    <string name="benefit_tip">Benefits and Tips</string>
+    <string name="bmiidealweight">Your Weight is Normal-Within Limits</string>
+    <string name="bmiobese">Alert: You are Obese - Reduce weight</string>
+    <string name="bmioverweight">You are Over Weight - Reduce weight</string>
+    <string name="bmiunderweight">You are Under Weight - Increase weight</string>
+    <string name="bodyMassIndex">Body Mass Index  :</string>
+    <string name="clickAddWater">click \'+\' to record water drunk</string>
     <!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/common_strings.xml -->
     <eat-comment/>
     <string name="common_android_wear_notification_needs_update_text">An application requires an update to the Android Wear app.</string>
@@ -131,16 +138,47 @@
     <string name="decline">Decline</string>
     <!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="description">Water Balance helps you to monitor your daily water intake and provides notifications to remind you to drink water.It also provides your Body Mass Index to keep a check on your weight.</string>
     <string name="drawer_close"/>
     <string name="drawer_open"/>
-    <string name="hello_world">Hello world!</string>
+    <string name="drinkLogDate">Date</string>
+    <string name="drinkLogintaketarget">Water Intake/Target</string>
+    <string name="drinktarget">Drink Target</string>
+    <string name="feedback">Feedback :</string>
+    <string name="feedback_name">Name :</string>
+    <string name="feedback_subject">Subject :</string>
+    <string name="hotday">HotDay</string>
+    <string name="noentry">No Entries Yet</string>
+    <string name="sendmail">Send Email</string>
+    <string name="statistics_intake">Average Daily Water Intake</string>
+    <string name="statistics_range">Your Ideal Weight Range</string>
+    <string name="statistics_target">Average Daily Drink Target</string>
+    <string name="statistics_weight">Your Current Weight</string>
     <!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
+    <!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="tip1">Regulates Body Temperature</string>
+    <string name="tip2">Relieves fatigue</string>
+    <string name="tip3">Helps in Digestion and Constipation</string>
+    <string name="tip4">Promotes Healthy Skin</string>
+    <string name="tip5">Flushes Out Toxins</string>
+    <string name="tip6">Aids Weight Loss</string>
+    <string name="tip7">Oxigenates Blood and lungs</string>
+    <string name="title">Water Balance</string>
+    <string name="titleAbout">About</string>
+    <string name="titleDrinkLog">Drink Log</string>
+    <string name="titleFeedback">Feedback</string>
+    <string name="titleHome">Home</string>
+    <string name="titleStatistics">Statistics</string>
     <!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>
+    <!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="workout">WorkOut</string>
     <!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">

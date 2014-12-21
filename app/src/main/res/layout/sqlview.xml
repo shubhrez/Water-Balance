@@ -22,7 +22,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
             android:background="#F0F0F0"
             android:orientation="horizontal"
             android:paddingTop="10dp"
@@ -33,24 +33,24 @@
             >
 
             <TextView
+                android:id="@+id/datetext"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Date"
-                android:textSize="18dp"
-                android:gravity="left"
-                android:fontFamily="sans-serif-medium"
+                android:text="@string/drinkLogDate"
                 android:textColor="#00B2FF"
+                android:textSize="19dp"
+                android:gravity="left"
                 android:layout_weight="2"
                 />
 
             <TextView
+                android:id="@+id/intakevstargettext"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Water Intake/Target"
-                android:layout_weight="1"
-                android:textSize="18dp"
-                android:fontFamily="sans-serif-medium"
+                android:text="@string/drinkLogintaketarget"
                 android:textColor="#00B2FF"
+                android:layout_weight="1"
+                android:textSize="19dp"
                 android:gravity="right"
                 />
 
@@ -78,15 +78,14 @@
                 android:layout_gravity="center"
                 android:padding="10dp"
                 android:fontFamily="sans-serif-condensed"
-                android:text="No entries yet"
-                android:textColor="#00B2FF"
+                android:text="@string/noentry"
                 android:textSize="22dp" />
         </LinearLayout>
 
             <com.google.android.gms.ads.AdView
                 android:id="@+id/adViewDrinkLog"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="75dp"
                 android:layout_centerHorizontal="true"
                 ads:adSize="BANNER"
                 android:layout_weight=".5"

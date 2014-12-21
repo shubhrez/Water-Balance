@@ -14,6 +14,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -60,7 +61,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	 * text view to show amount of water drunk by user and the target amount of
 	 * water to be drunk
 	 */
-	private static TextView waterDrunkVsTarget;
+
 
 	private static Integer amountOfWaterDrunk = 0;
 
@@ -110,8 +111,9 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 	Integer amountDrunk;
 	Integer targetWater;
-	static TextView bodyMassIndex, bodyMassIndexTip;
-
+	static TextView bodyMassIndex,bodyMassIndexText, bodyMassIndexTip,drinkTarget;
+    TextView adjustDrinkTargetText,hotdayText,workoutText,addWaterText;
+    private static TextView waterDrunkVsTarget;
 	CheckBox hot_Day, workOut;
 	static Button hotday_button, workout_button, drink_log_button,
 			benefit_button;
@@ -120,15 +122,42 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Dosis-SemiBold.ttf");
+        Typeface custom_font1 = Typeface.createFromAsset(getAssets(), "fonts/Dosis-Medium.ttf");
         AdView mAdView = (AdView) this.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-		singlelist = new ArrayList<HashMap<String, Object>>();
+
+        String bmiunderweight = getResources().getString(R.string.bmiunderweight);
+        String bmiidealweight = getResources().getString(R.string.bmiidealweight);
+        String bmioverweight = getResources().getString(R.string.bmioverweight);
+        String bmiobese = getResources().getString(R.string.bmiobese);
+
+        drinkTarget = (TextView) findViewById(R.id.drinkTarget);
+        bodyMassIndex = (TextView) findViewById(R.id.bmi);
+        bodyMassIndexTip = (TextView) findViewById(R.id.tip);
+        waterDrunkVsTarget = (TextView) findViewById(R.id.amount_of_water_drunk_vs_target);
+        bodyMassIndexText = (TextView) findViewById(R.id.bodyMassIndexText);
+        adjustDrinkTargetText = (TextView) findViewById(R.id.adjustDrinkTargetText);
+        hotdayText = (TextView) findViewById(R.id.hotdayText);
+        workoutText = (TextView) findViewById(R.id.workoutText);
+        addWaterText = (TextView) findViewById(R.id.addWaterText);
+        drinkTarget.setTypeface(custom_font);
+        bodyMassIndex.setTypeface(custom_font);
+        bodyMassIndexTip.setTypeface(custom_font1);
+        bodyMassIndexText.setTypeface(custom_font);
+        waterDrunkVsTarget.setTypeface(custom_font);
+        adjustDrinkTargetText.setTypeface(custom_font);
+        hotdayText.setTypeface(custom_font);
+        workoutText.setTypeface(custom_font);
+        addWaterText.setTypeface(custom_font);
+        singlelist = new ArrayList<HashMap<String, Object>>();
 		waterDrunkProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
 		addWater = (Button) findViewById(R.id.add_water_button);
 
-		waterDrunkVsTarget = (TextView) findViewById(R.id.amount_of_water_drunk_vs_target);
-		waterDrunkProgressBar.setMax(targetAmountOfWater);
+
+
+        waterDrunkProgressBar.setMax(targetAmountOfWater);
 		waterDrunkProgressBar.setProgress(amountOfWaterDrunk);
 		waterDrunkVsTarget.setText(amountOfWaterDrunk + "/"
 				+ targetAmountOfWater + " ML");
@@ -149,8 +178,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		} else {
 			workout_button.setBackgroundResource(R.drawable.workout_off);
 		}
-		bodyMassIndex = (TextView) findViewById(R.id.bmi);
-		bodyMassIndexTip = (TextView) findViewById(R.id.tip);
+
 		// bmiRange = (Button) findViewById(R.id.tip);
 		setBMI();
 
@@ -362,22 +390,23 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			heightInCm = (int) (heightInFoot * 30.48 + heightInInch * 2.54);
 		}
 
-		double z = 0;
+		int z = 0;
 		if (heightInCm != 0) {
-			z = (weightInKg * 10000) / (heightInCm * heightInCm);
+			z = (int) ((weightInKg * 10000) / (heightInCm * heightInCm));
 		}
 
 		String bmi = String.valueOf(z);
-		bodyMassIndex.setText("Body Mass Index : " + bmi);
-		if (z < 18.5) {
-			bodyMassIndexTip.setText("You are Under Weight - Increase weight");
-		} else if (z >= 18.5 && z < 24.9) {
-			bodyMassIndexTip.setText("Your Weight is Normal-Within Limits");
-		} else if (z >= 25 && z < 29.9) {
-			bodyMassIndexTip.setText("You are Over Weight - Reduce weight");
-		} else if (z >= 30) {
-			bodyMassIndexTip.setText("Alert: You are Obese - Reduce weight ");
-		}
+		bodyMassIndex.setText(bmi);
+
+        if (z < 18.5) {
+            bodyMassIndexTip.setText(R.string.bmiunderweight);
+        } else if (z >= 18.5 && z < 24.9) {
+            bodyMassIndexTip.setText(R.string.bmiidealweight);
+        } else if (z >= 25 && z < 29.9) {
+            bodyMassIndexTip.setText(R.string.bmioverweight);
+        } else if (z >= 30) {
+            bodyMassIndexTip.setText(R.string.bmiobese);
+        }
 	}
 
 	@Override
@@ -468,8 +497,9 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			menuitem.setIcon(R.drawable.notification_off);
 		}
 		ActionBar bar = getActionBar();
-		bar.setTitle(Html.fromHtml("<font color='#000000'>Home </font>"));
-		// bar.setTitle("Home");
+        String title = getResources().getString(R.string.titleHome);
+        bar.setTitle(title);
+		//bar.setTitle(Html.fromHtml("<font color='#000000'>Home</font>"));
 		bar.setIcon(R.drawable.icon);
 		bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00B2FF")));
 		return true;

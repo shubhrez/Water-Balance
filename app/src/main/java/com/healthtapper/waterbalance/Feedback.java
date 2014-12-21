@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -17,12 +18,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class Feedback extends Activity implements OnItemClickListener {
 
 	
 	EditText etSubject, etFeedback, etName;
-//	EditText etEmail, etSubject, etFeedback, etName;
+    TextView email, subject, feedback, name;
 	String emailAdd, subjectAdd, feedbackAdd, nameAdd;
 	Button sendMail;
 	private static int requestcode = 2 ;
@@ -35,14 +37,21 @@ public class Feedback extends Activity implements OnItemClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		ActionBar bar = getActionBar();
-		bar.setTitle(Html.fromHtml("<font color='#000000'>Feedback </font>"));
-		//bar.setTitle("Feedback");
-		bar.setIcon(R.drawable.icon);
-		bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00B2FF")));
-		setContentView(R.layout.feedback);
-		initiateVars();
-		sendMail.setOnClickListener(new View.OnClickListener() {
+    	setContentView(R.layout.feedback);
+        ActionBar bar = getActionBar();
+        String title = getResources().getString(R.string.titleFeedback);
+        bar.setTitle(title);
+        //bar.setTitle(Html.fromHtml("<font color='#000000'>Feedback </font>"));
+        //bar.setTitle("Feedback");
+        bar.setIcon(R.drawable.icon);
+        bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00B2FF")));
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Dosis-SemiBold.ttf");
+        initiateVars();
+        name.setTypeface(custom_font);
+        subject.setTypeface(custom_font);
+        feedback.setTypeface(custom_font);
+
+        sendMail.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -85,6 +94,9 @@ public class Feedback extends Activity implements OnItemClickListener {
 		etFeedback = (EditText) findViewById(R.id.feedback);
 		etName = (EditText) findViewById(R.id.name);
 		sendMail = (Button) findViewById(R.id.bsentEmail);
+        name = (TextView) findViewById(R.id.idname);
+        subject =(TextView) findViewById(R.id.idSubject);
+        feedback = (TextView) findViewById(R.id.idfeedback);
 	}
 	
 	@Override
