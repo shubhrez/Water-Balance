@@ -4,5 +4,6 @@
     <color name="app_pure_white">#ffffff</color>
     <color name="app_dark_gray">#D3D3D3</color>
     <color name="black">#000000</color>
+    <color name="alertBlue">#E8E8E8</color>
 
 </resources>

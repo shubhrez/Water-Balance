@@ -6,6 +6,7 @@
     <string name="action_settings">Settings</string>
     <string name="drawer_open"></string>
     <string name="drawer_close"></string>
+    <string name="banner_ad_unit_id">ca-app-pub-5565024915704110/6264490384</string>
 
     <string-array name="planets">
         <item>Home</item>
@@ -34,7 +35,7 @@
     </string-array>
     <string-array name="weight_dropdown">
         <item>kg</item>
-        <item>lbs</item>
+        <item>lb</item>
     </string-array>
     <string-array name="height_dropdown">
         <item>cm</item>

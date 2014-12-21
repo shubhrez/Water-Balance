@@ -10,7 +10,7 @@
     android:layout_height="50dp"
     android:background="#00B2FF"
     android:layout_margin="5dp"
-   
+
     />
 
 <TextView

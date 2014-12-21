@@ -105,12 +105,12 @@ public class Feedback extends Activity implements OnItemClickListener {
 		nameAdd = etName.getText().toString();
 	}
 
-//	@Override
-//	protected void onPause() {
-//		// TODO Auto-generated method stub
-//		super.onPause();
-//		finish();
-//	}
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		finish();
+	}
 
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {

@@ -3,6 +3,9 @@ package com.healthtapper.waterbalance;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.healthtapper.waterbalance.R;
 
 import android.app.ActionBar;
@@ -57,6 +60,9 @@ public class SQLView extends Activity implements OnItemClickListener{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sqlview);
+        AdView mAdView = (AdView) this.findViewById(R.id.adViewDrinkLog);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 		ActionBar bar = getActionBar();
 		bar.setTitle(Html.fromHtml("<font color='#000000'>Drink Log</font>"));
 		//bar.setTitle("Drink Log");
@@ -84,21 +90,22 @@ public class SQLView extends Activity implements OnItemClickListener{
 		// c.moveToNext()) {
 		for (c.moveToLast(); !c.isBeforeFirst(); c.moveToPrevious()) {
 			String date = c.getString(iDate);
-			String weight = "Weight- " + c.getString(iWeight) + " KG";
-			String intake = "Water Intake- " + c.getString(iIntake) + " ML";
-			String target = "Water Target- " + c.getString(iTarget) + " ML";
+			//String weight = "Weight- " + c.getString(iWeight) + " KG";
+			String weight = "Water Intake/Target";
+            String intake = c.getString(iIntake) + "/" + c.getString(iTarget) + " ML"  ;
+			//String target = "Water Target- " + c.getString(iTarget) + " ML";
 			// Adding value HashMap key => value
 			HashMap<String, String> map = new HashMap<String, String>();
 			map.put(TAG_DATE, date);
-			map.put(TAG_WEIGHT, weight);
+			//map.put(TAG_WEIGHT, weight);
 			map.put(TAG_INTAKE, intake);
-			map.put(TAG_TARGET, target);
+		//	map.put(TAG_TARGET, target);
 			oslist.add(map);
 			list = (ListView) findViewById(R.id.list);
 			ListAdapter adapter = new SimpleAdapter(SQLView.this, oslist,
-					R.layout.list_v, new String[] { TAG_DATE, TAG_WEIGHT,
-							TAG_INTAKE }, new int[] { R.id.date, R.id.weight,
-							R.id.intake });
+					R.layout.list_v, new String[] { TAG_DATE,
+							TAG_INTAKE}, new int[] { R.id.date,R.id.intake
+							});
 			list.setAdapter(adapter);
 			// WaterIntake info = new WaterIntake(this);
 			// info.open();
@@ -148,13 +155,13 @@ public class SQLView extends Activity implements OnItemClickListener{
 		drawerListener.syncState();
 	}
 
-//	@Override
-//	protected void onPause() {
-//		// TODO Auto-generated method stub
-//		super.onPause();
-//		finish();
-//	}
-//	
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		finish();
+	}
+
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		// TODO Auto-generated method stub

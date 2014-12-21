@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.waterbalance.MainActivity" >
+
+    <item
+        android:id="@+id/notification"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/notification_on"
+        android:title="Notification" />
+    
+        <item
+        android:id="@+id/weightEdit"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/weightedit"
+        android:title="EditWeight" />
+    
+
+    
+</menu>
+<!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/menu/main.xml -->

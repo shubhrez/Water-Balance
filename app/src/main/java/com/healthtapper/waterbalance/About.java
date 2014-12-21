@@ -47,10 +47,10 @@ public class About extends Activity implements OnItemClickListener{
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
-//	protected void onPause() {
-//		super.onPause();
-//		finish();
-//	}
+	protected void onPause() {
+		super.onPause();
+		finish();
+	}
 //	
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {

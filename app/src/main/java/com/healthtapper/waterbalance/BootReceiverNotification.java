@@ -20,7 +20,12 @@ public class BootReceiverNotification extends BroadcastReceiver {
 		//if (notification != 0) {
 			//new AlarmNotificationManager(ctxt);
 		//}
-		new AlarmNotificationManager(ctxt);
+        SharedPreferences pref = ctxt.getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_MULTI_PROCESS);
+        int notification = pref.getInt(MainActivity.NOTIFICATION, 1);
+        if (notification != 0) {
+          new AlarmNotificationManager(ctxt);
+        }
+		//new AlarmNotificationManager(ctxt);
 		new DataEntryReceiver(ctxt);
 	}
 

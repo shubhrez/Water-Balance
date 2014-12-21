@@ -5,7 +5,9 @@ import java.util.HashMap;
 
 import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -20,6 +22,9 @@ import android.widget.ListView;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class Statistics extends Activity implements OnItemClickListener {
 
@@ -44,6 +49,9 @@ public class Statistics extends Activity implements OnItemClickListener {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.statistics);
+        AdView mAdView = (AdView) this.findViewById(R.id.adViewDrinkLog);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 		ActionBar bar = getActionBar();
 		bar.setTitle(Html.fromHtml("<font color='#000000'>Statistics</font>"));
 		// bar.setTitle("About");
@@ -61,13 +69,12 @@ public class Statistics extends Activity implements OnItemClickListener {
 
 		Cursor c = info.ourDatabase.query(info.DATABASE_TABLE, columns, null,
 				null, null, null, null);
-		// String result =" ";
+
 		int iDate = c.getColumnIndex(KEY_DATE);
 		int iWeight = c.getColumnIndex(KEY_WEIGHT);
 		int iIntake = c.getColumnIndex(KEY_INTAKE);
 		int iTarget = c.getColumnIndex(KEY_TARGET);
-		// for (c.moveToFirst() c.moveToLast(); !c.isAfterLast();
-		// c.moveToNext()) {
+
 		int totalEntries = c.getCount();
 		int totalIntake = 0;
 		int totalTarget = 0;
@@ -86,19 +93,53 @@ public class Statistics extends Activity implements OnItemClickListener {
 		int avintake = totalIntake / totalEntries;
 		int avtarget = totalTarget / totalEntries;
 		int ht = MainActivity.returnHeight(this);
-		int wt1 = (ht*ht)*(int)19.5/10000;
-		int wt2 = (ht*ht)*(int)23.5/10000;
+		int wt1 = (int) ((ht*ht)*(19.5/10000));
+		int wt2 = (int) ((ht*ht)*(23.5/10000));
 		String avintake1 = Integer.toString(avintake) + " ML";
 		String avtarget1 = Integer.toString(avtarget) + " ML";
 		String currentweight1 = Integer.toString(currentweight) + " KG";
-		String weightRange = String.valueOf(wt1) + "-" + String.valueOf(wt2)+ " KG";
+		String weightRange = String.valueOf(wt1 + 2) + "-" + String.valueOf(wt2 - 2)+ " KG";
 		avIntake.setText(avintake1);
 		avTarget.setText(avtarget1);
-		currentWeight.setText(currentweight1);
+        SharedPreferences pref = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_MULTI_PROCESS);
+        String weightUnit = pref.getString(MainActivity.WEIGHT_UNIT, "0");
+            if (weightUnit.equals("lb")){
+                currentweight = pref.getInt(MainActivity.WEIGHT_KEY_POUND, 0);
+                currentweight1 = Integer.toString(currentweight) + " lb";
+                wt1 = ((int) ((wt1/.453) + 4));
+                wt2 = ((int) ((wt2/.453) - 4));
+                weightRange = String.valueOf(wt1) + "-" + String.valueOf(wt2)+ " lb";
+            }
+        currentWeight.setText(currentweight1);
 		idealWeight.setText(weightRange);
-		}
-		
-		
+
+		} else if (totalEntries == 0){
+
+            SharedPreferences pref = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_MULTI_PROCESS);
+            int currentweight = MainActivity.returnWeight(this);
+            int avtarget = MainActivity.returnDrinkTarget(this);
+            int ht = MainActivity.returnHeight(this);
+            int wt1 = (int) ((ht*ht)*(19.5/10000));
+            int wt2 = (int) ((ht*ht)*(23.5/10000));
+
+            String avtarget1 = Integer.toString(avtarget) + " ML";
+            String currentweight1 = Integer.toString(currentweight) + " KG";
+            String weightRange = Integer.toString(wt1 + 2) + "-" + Integer.toString(wt2 - 2)+ " KG";
+           // avIntake.setText(avintake1);
+            avTarget.setText(avtarget1);
+
+            String weightUnit = pref.getString(MainActivity.WEIGHT_UNIT, "0");
+            if (weightUnit.equals("lb")){
+                currentweight = pref.getInt(MainActivity.WEIGHT_KEY_POUND, 0);
+                currentweight1 = Integer.toString(currentweight) + " lb";
+                wt1 = (int)((wt1/.43) + 4);
+                wt2 = (int)((wt2/.43) - 4);
+                weightRange = Integer.toString(wt1) + "-" + Integer.toString(wt2)+ " lb";
+            }
+            currentWeight.setText(currentweight1);
+            idealWeight.setText(weightRange);
+        }
+
 		planets_statistics = getResources().getStringArray(
 				R.array.planets_statistics);
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -114,6 +155,7 @@ public class Statistics extends Activity implements OnItemClickListener {
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 	}
+
 
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
@@ -155,5 +197,12 @@ public class Statistics extends Activity implements OnItemClickListener {
 		}
 		return true;
 	}
+
+    @Override
+    protected void onPause() {
+        // TODO Auto-generated method stub
+        super.onPause();
+        finish();
+    }
 
 }

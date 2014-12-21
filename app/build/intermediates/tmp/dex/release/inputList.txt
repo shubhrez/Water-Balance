@@ -1,0 +1,6 @@
+/home/shubham/AndroidstudioProjects/WaterBalance/app/build/intermediates/classes/release
+/home/shubham/AndroidstudioProjects/WaterBalance/app/build/intermediates/pre-dexed/release/support-annotations-21.0.0-1a29d6b4037aea2a57e28bc90cc6081b098452b2.jar
+/home/shubham/AndroidstudioProjects/WaterBalance/app/build/intermediates/pre-dexed/release/splunk-mint-4.0.6-b47e6cbb98f2b1d7f9a3d4ec4300caaaccc62edc.jar
+/home/shubham/AndroidstudioProjects/WaterBalance/app/build/intermediates/pre-dexed/release/internal_impl-21.0.0-8c00b073a65b5dc44abcd42b4d9396a3d949ed86.jar
+/home/shubham/AndroidstudioProjects/WaterBalance/app/build/intermediates/pre-dexed/release/classes-c93fcf64ee597358212325f58fcadb594b804342.jar
+/home/shubham/AndroidstudioProjects/WaterBalance/app/build/intermediates/pre-dexed/release/classes-961c26c6cc9a43f2346005c7a6127ecde6126f90.jar

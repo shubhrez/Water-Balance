@@ -40,6 +40,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
+
 public class MainActivity extends Activity implements OnItemClickListener {
 
 	/*
@@ -116,10 +120,11 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+        AdView mAdView = (AdView) this.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 		singlelist = new ArrayList<HashMap<String, Object>>();
 		waterDrunkProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
-		// drink_log_button = (Button) findViewById(R.id.drink_log_button);
-		// benefit_button = (Button) findViewById(R.id.benefits_button);
 		addWater = (Button) findViewById(R.id.add_water_button);
 
 		waterDrunkVsTarget = (TextView) findViewById(R.id.amount_of_water_drunk_vs_target);
@@ -240,20 +245,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			}
 		});
 
-		/*
-		 * drink_log_button.setOnClickListener(new OnClickListener() {
-		 * 
-		 * @Override public void onClick(View v) { Intent i = new
-		 * Intent("com.healthtapper.waterbalance.SQLVIEW"); startActivity(i);
-		 * 
-		 * } });
-		 * 
-		 * benefit_button.setOnClickListener(new OnClickListener() {
-		 * 
-		 * @Override public void onClick(View v) { Intent benefit = new Intent(
-		 * "com.healthtapper.waterbalance.BENEFIT"); startActivity(benefit); }
-		 * });
-		 */
 		addWater.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -306,7 +297,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 							}
 						});
 
-				builder.show();
+                builder.show();
 
 			}
 
@@ -314,7 +305,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 		weightInKg = pref.getInt(WEIGHT_KEY_KG, 0);
 		weightInPound = pref.getInt(WEIGHT_KEY_POUND, 0);
-		heightInCm = pref.getInt(HEIGHT_KEY_CM, 0);
 		amountOfWaterDrunk = pref.getInt(AMOUNTDRUNK, 0);
 
 		targetAmountOfWater = pref.getInt(TARGETDRUNK, 0);
@@ -426,14 +416,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		}
 	}
 
-	/*
-	 * public void selectItem(int position) { // TODO Auto-generated method stub
-	 * listView.setItemChecked(position,true); setTitle(planets[position]); }
-	 * 
-	 * public void setTitle(String title){ ActionBar bar = getActionBar();
-	 * bar.setTitle(title); }
-	 */
-
 	public static int returnWeight(Context context) {
 		pref = context.getSharedPreferences(PREF_NAME,
 				Context.MODE_MULTI_PROCESS);
@@ -471,12 +453,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		SharedPreferences.Editor editor = pref.edit();
 		editor.putInt(AMOUNTDRUNK, 0);
 		editor.commit();
-		// _amountOfWaterDrunk = pref.getInt(AMOUNTDRUNK, 0);
-		// _targetAmountOfWater = pref.getInt(TARGETDRUNK, 0);
-		// MainActivity._waterDrunkProgressBar.setProgress(_amountOfWaterDrunk);
-		// MainActivity._waterDrunkProgressBar.setMax(_targetAmountOfWater);
-		// _waterDrunkVsTarget.setText(_amountOfWaterDrunk + "/"
-		// + _targetAmountOfWater + " ML");
 		return wi;
 	}
 
@@ -544,11 +520,12 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	 * @param cancelable
 	 *            - is true if builder should be cancelable, false otherwise
 	 */
+
 	private void showWeightHeightDialog(boolean cancelable) {
 		final EditText heightUserFoot;
 		final EditText heightUserInchAndCm;
 		final EditText weightUser;
-
+        final EditText heightUserInch;
 		ArrayAdapter<CharSequence> weightAdapter = ArrayAdapter
 				.createFromResource(this, R.array.weight_dropdown,
 						android.R.layout.simple_spinner_item);
@@ -564,10 +541,8 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		LayoutInflater inflater = LayoutInflater.from(this);
 		View layout = inflater.inflate(R.layout.height_weight_input, null);
 
-		final Spinner weightSpinner = (Spinner) layout
-				.findViewById(R.id.spinner_weight);
-		final Spinner heightSpinner = (Spinner) layout
-				.findViewById(R.id.spinner_height);
+		final Spinner weightSpinner = (Spinner) layout.findViewById(R.id.spinner_weight);
+		final Spinner heightSpinner = (Spinner) layout.findViewById(R.id.spinner_height);
 
 		weightSpinner.setAdapter(weightAdapter);
 		heightSpinner.setAdapter(heightAdapter);
@@ -582,16 +557,16 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 		weightUser = (EditText) layout.findViewById(R.id.weight);
 		heightUserFoot = (EditText) layout.findViewById(R.id.input_foot);
-		heightUserInchAndCm = (EditText) layout
-				.findViewById(R.id.input_cm_inch);
+		heightUserInchAndCm = (EditText) layout.findViewById(R.id.input_cm_inch);
+        heightUserInch = (EditText) layout.findViewById(R.id.input_inch);
 
-		final String weightUnit = pref.getString(WEIGHT_UNIT, "0");
+		String weightUnit = pref.getString(WEIGHT_UNIT, "0");
 		String heightUnit = pref.getString(HEIGHT_UNIT, "0");
 
 		if (weightUnit.equals("kg")) {
 			weightInKg = pref.getInt(WEIGHT_KEY_KG, 0);
 			weightUser.setText(weightInKg.toString());
-		} else if (weightUnit.equals("pound")) {
+		} else if (weightUnit.equals("lb")) {
 			weightInPound = pref.getInt(WEIGHT_KEY_POUND, 0);
 			weightUser.setText(weightInPound.toString());
 			weightSpinner.setSelection(1);
@@ -604,8 +579,9 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			heightInFoot = pref.getInt(HEIGHT_KEY_FOOT, 0);
 			heightInInch = pref.getInt(HEIGHT_KEY_INCH, 0);
 			heightUserFoot.setText(heightInFoot.toString());
-			heightUserInchAndCm.setText(heightInInch.toString());
-			heightSpinner.setSelection(1);
+			//heightUserInchAndCm.setText(heightInInch.toString());
+            heightUserInch.setText(heightInInch.toString());
+            heightSpinner.setSelection(1);
 		}
 		// weightInKg = pref.getInt(WEIGHT_KEY_KG, 0);
 		// heightInCm = pref.getInt(HEIGHT_KEY_CM, 0);
@@ -630,128 +606,136 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		dialog.show();
 		Button button = ((AlertDialog) dialog)
 				.getButton(DialogInterface.BUTTON_POSITIVE);
-
+        button.setBackgroundColor(getResources().getColor(R.color.alertBlue));
 		button.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View view) {
-				Integer weightPosition = weightSpinner
-						.getSelectedItemPosition();
-				Integer heightPosition = heightSpinner
-						.getSelectedItemPosition();
+                Integer weightPosition = weightSpinner.getSelectedItemPosition();
+                Integer heightPosition = heightSpinner.getSelectedItemPosition();
 
-				if (!(weightUser.getText().toString().equals("")
-						|| (Integer.parseInt(weightUser.getText().toString())) == 0
-						|| heightUserInchAndCm.getText().toString().equals("") || (Integer
-						.parseInt(heightUserInchAndCm.getText().toString())) == 0)) {
-					if ((heightPosition == 1)
-							&& !(heightUserFoot.getText().equals(""))
-							&& ((Integer.parseInt(heightUserFoot.getText()
-									.toString())) != 0)) {
-						// foot-inch selected
-						Integer weight = Integer.parseInt(weightUser.getText()
-								.toString());
-						Integer heightInch = Integer
-								.parseInt(heightUserInchAndCm.getText()
-										.toString());
-						Integer heightFoot = Integer.parseInt(heightUserFoot
-								.getText().toString());
-						SharedPreferences.Editor editor = pref.edit();
-						editor.putString(MainActivity.WEIGHT_UNIT,
-								(String) weightSpinner.getSelectedItem());
-						editor.putString(MainActivity.HEIGHT_UNIT,
-								(String) heightSpinner.getSelectedItem());
-						if (((String) weightSpinner.getSelectedItem())
-								.equals("kg")) {
-							editor.putInt(WEIGHT_KEY_KG, weight);
-							editor.putInt(WEIGHT_KEY_POUND, 0);
-							editor.putInt(HEIGHT_KEY_FOOT, heightFoot);
-							editor.putInt(HEIGHT_KEY_INCH, heightInch);
-							editor.putInt(HEIGHT_KEY_CM, 0);
-							targetAmountOfWater = 36 * weight;
-						} else {
-							editor.putInt(WEIGHT_KEY_KG, 0);
-							editor.putInt(WEIGHT_KEY_POUND, weight);
-							editor.putInt(HEIGHT_KEY_FOOT, heightFoot);
-							editor.putInt(HEIGHT_KEY_INCH, heightInch);
-							editor.putInt(HEIGHT_KEY_CM, 0);
-							targetAmountOfWater = (int) (0.453 * 36.0 * weight);
-						}
-						int hotday = pref.getInt(MainActivity.HOTDAY, 0);
-						int workout = pref.getInt(MainActivity.WORKOUT, 0);
-						if (hotday == 1) {
-							targetAmountOfWater += 250;
-						}
-						if (workout == 1) {
-							targetAmountOfWater += 400;
-						}
-						editor.putInt(MainActivity.TARGETDRUNK,
-								targetAmountOfWater);
-						editor.commit();
-						waterDrunkVsTarget.setText(amountOfWaterDrunk + "/"
-								+ targetAmountOfWater + " ML");
-						waterDrunkProgressBar.setMax(targetAmountOfWater);
-						waterDrunkProgressBar.setProgress(amountOfWaterDrunk);
-						dialog.dismiss();
-						MainActivity.setBMI();
-					} else if (heightPosition == 0) {
-						// cm selected
-						Integer weight = Integer.parseInt(weightUser.getText()
-								.toString());
-						Integer height = Integer.parseInt(heightUserInchAndCm
-								.getText().toString());
-						SharedPreferences.Editor editor = pref.edit();
-						editor.putString(MainActivity.WEIGHT_UNIT,
-								(String) weightSpinner.getSelectedItem());
-						editor.putString(MainActivity.HEIGHT_UNIT,
-								(String) heightSpinner.getSelectedItem());
-						if (((String) weightSpinner.getSelectedItem())
-								.equals("kg")) {
-							editor.putInt(WEIGHT_KEY_KG, weight);
-							editor.putInt(WEIGHT_KEY_POUND, 0);
-							editor.putInt(HEIGHT_KEY_FOOT, 0);
-							editor.putInt(HEIGHT_KEY_INCH, 0);
-							editor.putInt(HEIGHT_KEY_CM, height);
-							targetAmountOfWater = 36 * weight;
-						} else {
-							editor.putInt(WEIGHT_KEY_KG, 0);
-							editor.putInt(WEIGHT_KEY_POUND, weight);
-							editor.putInt(HEIGHT_KEY_FOOT, 0);
-							editor.putInt(HEIGHT_KEY_INCH, 0);
-							editor.putInt(HEIGHT_KEY_CM, height);
-							targetAmountOfWater = (int) (0.453 * 36.0 * weight);
-						}
-						int hotday = pref.getInt(MainActivity.HOTDAY, 0);
-						int workout = pref.getInt(MainActivity.WORKOUT, 0);
-						if (hotday == 1) {
-							targetAmountOfWater += 250;
-						}
-						if (workout == 1) {
-							targetAmountOfWater += 400;
-						}
-						editor.putInt(MainActivity.TARGETDRUNK,
-								targetAmountOfWater);
-						editor.commit();
-						waterDrunkVsTarget.setText(amountOfWaterDrunk + "/"
-								+ targetAmountOfWater + " ML");
-						waterDrunkProgressBar.setMax(targetAmountOfWater);
-						waterDrunkProgressBar.setProgress(amountOfWaterDrunk);
-						dialog.dismiss();
-						MainActivity.setBMI();
-					} else {
-						Toast.makeText(
-								getApplicationContext(),
-								"Please enter correct values before preceeding",
-								Toast.LENGTH_LONG).show();
-					}
-				} else {
-					Toast.makeText(getApplicationContext(),
-							"Please enter correct values before preceeding",
-							Toast.LENGTH_LONG).show();
-				}
+           /*   if (!(weightUser.getText().toString().equals("")
+                        || (Integer.parseInt(weightUser.getText().toString())) == 0
+                        || heightUserInchAndCm.getText().toString().equals("") || heightUserFoot.getText().toString().equals("") || (Integer
+                        .parseInt(heightUserFoot.getText().toString())) == 0)) {
+*/
 
-			}
-		});
+                if (!(weightUser.getText().toString().equals("")) && (Integer.parseInt(weightUser.getText().toString())) != 0) {
+
+                    if (heightPosition == 1) {
+
+                        if (!(heightUserFoot.getText().toString().equals(""))
+                                && ((Integer.parseInt(heightUserFoot.getText().toString().toString())) != 0)
+                                && !(heightUserInch.getText().equals(""))) {
+                            // foot-inch selected
+                            Integer weight = Integer.parseInt(weightUser.getText()
+                                    .toString());
+
+                            Integer heightInch = Integer
+                                    .parseInt(heightUserInch.getText()
+                                            .toString());
+                            Integer heightFoot = Integer.parseInt(heightUserFoot
+                                    .getText().toString());
+                            SharedPreferences.Editor editor = pref.edit();
+                            editor.putString(MainActivity.WEIGHT_UNIT, (String) weightSpinner.getSelectedItem());
+                            editor.putString(MainActivity.HEIGHT_UNIT, (String) heightSpinner.getSelectedItem());
+                            if (((String) weightSpinner.getSelectedItem()).equals("kg")) {
+
+                                editor.putInt(WEIGHT_KEY_KG, weight);
+                                editor.putInt(WEIGHT_KEY_POUND, 0);
+                                editor.putInt(HEIGHT_KEY_FOOT, heightFoot);
+                                editor.putInt(HEIGHT_KEY_INCH, heightInch);
+                                editor.putInt(HEIGHT_KEY_CM, 0);
+                                editor.commit();
+                                targetAmountOfWater = 36 * weight;
+                            } else {
+                                editor.putInt(WEIGHT_KEY_KG, 0);
+                                editor.putInt(WEIGHT_KEY_POUND, weight);
+                                editor.putInt(HEIGHT_KEY_FOOT, heightFoot);
+                                editor.putInt(HEIGHT_KEY_INCH, heightInch);
+                                editor.putInt(HEIGHT_KEY_CM, 0);
+                                editor.commit();
+                                targetAmountOfWater = (int) (0.453 * 36.0 * weight);
+                            }
+                            int hotday = pref.getInt(MainActivity.HOTDAY, 0);
+                            int workout = pref.getInt(MainActivity.WORKOUT, 0);
+                            if (hotday == 1) {
+                                targetAmountOfWater += 250;
+                            }
+                            if (workout == 1) {
+                                targetAmountOfWater += 400;
+                            }
+                            editor.putInt(MainActivity.TARGETDRUNK,
+                                    targetAmountOfWater);
+                            editor.commit();
+                            waterDrunkVsTarget.setText(amountOfWaterDrunk + "/"
+                                    + targetAmountOfWater + " ML");
+                            waterDrunkProgressBar.setMax(targetAmountOfWater);
+                            waterDrunkProgressBar.setProgress(amountOfWaterDrunk);
+                            dialog.dismiss();
+                            MainActivity.setBMI();
+                        } else {
+                            Toast.makeText(getApplicationContext(),
+                                    "Please enter height before preceeding",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    } else if (heightPosition == 0) {
+                        // cm selected
+                        if (!(heightUserInchAndCm.getText().toString().equals("")) && ((Integer.parseInt(heightUserInchAndCm.getText().toString())) != 0)) {
+                            Integer weight = Integer.parseInt(weightUser.getText()
+                                    .toString());
+                            Integer height = Integer.parseInt(heightUserInchAndCm
+                                    .getText().toString());
+                            SharedPreferences.Editor editor = pref.edit();
+                            editor.putString(MainActivity.WEIGHT_UNIT, (String) weightSpinner.getSelectedItem());
+                            editor.putString(MainActivity.HEIGHT_UNIT, (String) heightSpinner.getSelectedItem());
+                            if (((String) weightSpinner.getSelectedItem()).equals("kg")) {
+                                editor.putInt(WEIGHT_KEY_KG, weight);
+                                editor.putInt(WEIGHT_KEY_POUND, 0);
+                                editor.putInt(HEIGHT_KEY_FOOT, 0);
+                                editor.putInt(HEIGHT_KEY_INCH, 0);
+                                editor.putInt(HEIGHT_KEY_CM, height);
+                                editor.commit();
+                                targetAmountOfWater = 36 * weight;
+                            } else {
+                                editor.putInt(WEIGHT_KEY_KG, 0);
+                                editor.putInt(WEIGHT_KEY_POUND, weight);
+                                editor.putInt(HEIGHT_KEY_FOOT, 0);
+                                editor.putInt(HEIGHT_KEY_INCH, 0);
+                                editor.putInt(HEIGHT_KEY_CM, height);
+                                editor.commit();
+                                targetAmountOfWater = (int) (0.453 * 36.0 * weight);
+                            }
+                            int hotday = pref.getInt(MainActivity.HOTDAY, 0);
+                            int workout = pref.getInt(MainActivity.WORKOUT, 0);
+                            if (hotday == 1) {
+                                targetAmountOfWater += 250;
+                            }
+                            if (workout == 1) {
+                                targetAmountOfWater += 400;
+                            }
+                            editor.putInt(MainActivity.TARGETDRUNK, targetAmountOfWater);
+                            editor.commit();
+                            waterDrunkVsTarget.setText(amountOfWaterDrunk + "/"
+                                    + targetAmountOfWater + " ML");
+                            waterDrunkProgressBar.setMax(targetAmountOfWater);
+                            waterDrunkProgressBar.setProgress(amountOfWaterDrunk);
+                            dialog.dismiss();
+                            MainActivity.setBMI();
+                        } else {
+                            Toast.makeText(getApplicationContext(),
+                                    "Please enter height before preceeding",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                } else {
+                    Toast.makeText(getApplicationContext(),
+                            "Please enter weight before preceeding",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+           });
 
 		heightSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
 
@@ -759,14 +743,19 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			public void onItemSelected(AdapterView<?> parent, View view,
 					int position, long id) {
 				if (position == 0) {
-					heightUserFoot.setVisibility(View.INVISIBLE);
-					// heightUserInchAndCm.setText("");
+
+                    heightUserFoot.setVisibility(View.INVISIBLE);
+                    heightUserInchAndCm.setVisibility(View.VISIBLE);
+                    heightUserInch.setVisibility(View.INVISIBLE);
+
 				} else if (position == 1) {
 					heightUserFoot.setVisibility(View.VISIBLE);
-					// heightUserFoot.setText("");
-					// heightUserInchAndCm.setText("");
+                    heightUserInchAndCm.setVisibility(View.INVISIBLE);
+                    heightUserInch.setVisibility(View.VISIBLE);
+
 				}
 			}
+
 
 			@Override
 			public void onNothingSelected(AdapterView<?> parent) {
