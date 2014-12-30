@@ -42,6 +42,18 @@
     <string name="titleStatistics">Statistics</string>
     <string name="titleFeedback">Feedback</string>
     <string name="titleAbout">About</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="addWaterAlertTitle">Select a Glass</string>
+    <string name="weightHeightAlertTitle">Enter the Details</string>
+    <string name="addWaterAlertButton">Cancel</string>
+    <string name="weightHeightAlertButton">Done</string>
+    <string name="kgText">kg - Kilogram</string>
+    <string name="lbText">lb - Pound</string>
+    <string name="cmText">cm - Centimeter</string>
+    <string name="ftinText">ft-in - Foot-Inch</string>
+    <string name="mlText">ML - Millilitre</string>
+    <string name="unitsText">Units Convention</string>
 
     <string-array name="planets">
         <item>Home</item>

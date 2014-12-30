@@ -50,9 +50,6 @@ public class Statistics extends Activity implements OnItemClickListener {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.statistics);
-        AdView mAdView = (AdView) this.findViewById(R.id.adViewStatistics);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 		ActionBar bar = getActionBar();
         String title = getResources().getString(R.string.titleStatistics);
         bar.setTitle(title);
@@ -111,12 +108,12 @@ public class Statistics extends Activity implements OnItemClickListener {
 		int avintake = totalIntake / totalEntries;
 		int avtarget = totalTarget / totalEntries;
 		int ht = MainActivity.returnHeight(this);
-		int wt1 = (int) ((ht*ht)*(19.5/10000));
-		int wt2 = (int) ((ht*ht)*(23.5/10000));
+		int wt1 = (int) ((ht*ht)*(18.5/10000));
+		int wt2 = (int) ((ht*ht)*(24.9/10000));
 		String avintake1 = Integer.toString(avintake) + " ML";
 		String avtarget1 = Integer.toString(avtarget) + " ML";
 		String currentweight1 = Integer.toString(currentweight) + " KG";
-		String weightRange = String.valueOf(wt1 + 2) + "-" + String.valueOf(wt2 - 2)+ " KG";
+		String weightRange = String.valueOf(wt1 + 7) + "-" + String.valueOf(wt2 - 6)+ " KG";
 		avIntake.setText(avintake1);
 		avTarget.setText(avtarget1);
         SharedPreferences pref = getSharedPreferences(MainActivity.PREF_NAME, Context.MODE_MULTI_PROCESS);
@@ -124,8 +121,8 @@ public class Statistics extends Activity implements OnItemClickListener {
             if (weightUnit.equals("lb")){
                 currentweight = pref.getInt(MainActivity.WEIGHT_KEY_POUND, 0);
                 currentweight1 = Integer.toString(currentweight) + " lb";
-                wt1 = ((int) ((wt1/.453) + 4));
-                wt2 = ((int) ((wt2/.453) - 4));
+                wt1 = ((int) ((wt1/.453) + 14));
+                wt2 = ((int) ((wt2/.453) - 12));
                 weightRange = String.valueOf(wt1) + "-" + String.valueOf(wt2)+ " lb";
             }
         currentWeight.setText(currentweight1);
@@ -137,12 +134,12 @@ public class Statistics extends Activity implements OnItemClickListener {
             int currentweight = MainActivity.returnWeight(this);
             int avtarget = MainActivity.returnDrinkTarget(this);
             int ht = MainActivity.returnHeight(this);
-            int wt1 = (int) ((ht*ht)*(19.5/10000));
-            int wt2 = (int) ((ht*ht)*(23.5/10000));
+            int wt1 = (int) ((ht*ht)*(18.5/10000));
+            int wt2 = (int) ((ht*ht)*(24.9/10000));
 
             String avtarget1 = Integer.toString(avtarget) + " ML";
             String currentweight1 = Integer.toString(currentweight) + " KG";
-            String weightRange = Integer.toString(wt1 + 2) + "-" + Integer.toString(wt2 - 2)+ " KG";
+            String weightRange = Integer.toString(wt1 + 7) + "-" + Integer.toString(wt2 - 6)+ " KG";
            // avIntake.setText(avintake1);
             avTarget.setText(avtarget1);
 
@@ -150,8 +147,8 @@ public class Statistics extends Activity implements OnItemClickListener {
             if (weightUnit.equals("lb")){
                 currentweight = pref.getInt(MainActivity.WEIGHT_KEY_POUND, 0);
                 currentweight1 = Integer.toString(currentweight) + " lb";
-                wt1 = (int)((wt1/.43) + 4);
-                wt2 = (int)((wt2/.43) - 4);
+                wt1 = (int)((wt1/.453) + 14);
+                wt2 = (int)((wt2/.453) - 12);
                 weightRange = Integer.toString(wt1) + "-" + Integer.toString(wt2)+ " lb";
             }
             currentWeight.setText(currentweight1);

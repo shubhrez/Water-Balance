@@ -26,6 +26,7 @@ public class About extends Activity implements OnItemClickListener{
 	private String[] planets_about;
 	private ActionBarDrawerToggle drawerListener;
     private TextView information,tip1,tip2,tip3,tip4,tip5,tip6,tip7;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -39,6 +40,7 @@ public class About extends Activity implements OnItemClickListener{
 		bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#00B2FF")));
 		bar.setIcon(R.drawable.icon);
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Dosis-Medium.ttf");
+        Typeface custom_font1 = Typeface.createFromAsset(getAssets(), "fonts/Dosis-SemiBold.ttf");
         information = (TextView) findViewById(R.id.information);
         information.setTypeface(custom_font);
         tip1 = (TextView) findViewById(R.id.tip1);

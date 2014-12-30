@@ -10,7 +10,7 @@ import android.util.Log;
 
 public class DataEntryReceiver {
 	public static final int DATA_ENTRY_HOUR_OF_DAY = 0; // start at 8 AM
-	public static final long INTERVAL = 20*1000; // five minutes in milli-secs
+	public static final long INTERVAL = 24*60*60*1000; // five minutes in milli-secs
 
 	private Context context;
 

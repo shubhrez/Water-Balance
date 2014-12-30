@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        >
+        <TextView
+            android:id="@+id/kgUnitText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/kgText"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:textSize="17dp"
+            />
+        <TextView
+            android:id="@+id/lbUnitText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lbText"
+            android:textSize="17dp"
+            android:paddingBottom="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/cmUnitText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cmText"
+            android:textSize="17dp"
+            android:paddingBottom="10dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/ftinUnitText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ftinText"
+            android:textSize="17dp"
+            android:paddingBottom="10dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mlUnitText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mlText"
+        android:textSize="17dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        />
+</LinearLayout><!-- From: file:/home/shubham/AndroidstudioProjects/waterbalancestudio/app/src/main/res/layout/unit_convention.xml -->

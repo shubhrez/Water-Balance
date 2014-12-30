@@ -9,6 +9,7 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.inmobi.commons.InMobi;
 import com.splunk.mint.Mint;
 
 public class Splash extends Activity {
@@ -20,6 +21,7 @@ public class Splash extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		Mint.initAndStartSession(Splash.this, "acb78c23");
+        InMobi.initialize(Splash.this, "9a37b437c9504a2190126009f07b6a67");
 		getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
 		ActionBar bar = getActionBar();
 		bar.hide();

@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:background="#F0F0F0"
     android:orientation="horizontal"
-    android:paddingTop="10dp"
+    android:paddingTop="5dp"
     android:paddingBottom="10dp"
     >
 

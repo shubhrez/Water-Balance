@@ -7,7 +7,6 @@
     <FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/mainContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -36,12 +35,12 @@
                 android:weightSum="100" >
 
                 <TextView
+                    android:id="@+id/avIntakeText"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="left"
-                    android:text="Average Daily Water Intake"
-                    android:textColor="#00B2FF"
+                    android:text="@string/statistics_intake"
                     android:textSize="22dp" />
 
                 <View
@@ -55,8 +54,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="right"
-                    android:text="No Entries Yet"
-                    android:textColor="#00B2FF"
+                    android:text="@string/noentry"
                     android:textSize="22dp" />
             </LinearLayout>
 
@@ -68,12 +66,12 @@
                 android:weightSum="100" >
 
                 <TextView
+                    android:id="@+id/avTargetText"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="left"
-                    android:text="Average Daily Drink Target"
-                    android:textColor="#00B2FF"
+                    android:text="@string/statistics_target"
                     android:textSize="22dp" />
 
                 <View
@@ -87,8 +85,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="right"
-                    android:text="No Entries Yet"
-                    android:textColor="#00B2FF"
+                    android:text="@string/noentry"
                     android:textSize="22dp" />
             </LinearLayout>
 
@@ -100,12 +97,12 @@
                 android:weightSum="100" >
 
                 <TextView
+                    android:id="@+id/currentWeightText"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="left"
-                    android:text="Your Current Weight"
-                    android:textColor="#00B2FF"
+                    android:text="@string/statistics_weight"
                     android:textSize="22dp" />
 
                 <View
@@ -119,8 +116,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="right"
-                    android:text="No Entries Yet"
-                    android:textColor="#00B2FF"
+                    android:text="@string/noentry"
                     android:textSize="22dp" />
             </LinearLayout>
 
@@ -132,12 +128,12 @@
                 android:weightSum="100" >
 
                 <TextView
+                    android:id="@+id/idealWeightText"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="left"
-                    android:text="Your Ideal Weight Range"
-                    android:textColor="#00B2FF"
+                    android:text="@string/statistics_range"
                     android:textSize="22dp" />
 
                 <View
@@ -151,20 +147,16 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
                     android:gravity="right"
-                    android:text="No Entries Yet"
-                    android:textColor="#00B2FF"
+                    android:text="@string/noentry"
                     android:textSize="22dp" />
             </LinearLayout>
 
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/adViewDrinkLog"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_centerHorizontal="true"
-                ads:adSize="BANNER"
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="15"
-                ads:adUnitId="ca-app-pub-2266797178837677/6963126749">
-            </com.google.android.gms.ads.AdView>
+                android:orientation="vertical"
+                android:weightSum="100" />
 
         </LinearLayout>
     </FrameLayout>
@@ -177,4 +169,4 @@
         android:background="#FFFFFF" >
     </ListView>
 
-</android.support.v4.widget.DrawerLayout><!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/statistics.xml -->
+</android.support.v4.widget.DrawerLayout><!-- From: file:/home/shubham/AndroidstudioProjects/waterbalancestudio/app/src/main/res/layout/statistics.xml -->

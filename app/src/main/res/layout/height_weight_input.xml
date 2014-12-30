@@ -20,7 +20,7 @@
             android:paddingBottom="0dp"
             android:paddingLeft="10dp"
             android:paddingRight="20dp"
-            android:text="Weight"
+            android:text="@string/weight"
             android:textSize="20sp" />
 
         <EditText
@@ -75,7 +75,7 @@
             android:paddingBottom="0dp"
             android:paddingLeft="10dp"
             android:paddingRight="20dp"
-            android:text="Height"
+            android:text="@string/height"
             android:textSize="20sp" />
 
 

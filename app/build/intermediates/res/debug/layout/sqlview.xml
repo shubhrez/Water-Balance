@@ -22,31 +22,30 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:background="#F0F0F0"
             android:orientation="horizontal"
             android:paddingTop="10dp"
-            android:layout_weight="1.5"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:paddingBottom="0dp"
+            android:layout_weight="1"
             >
 
             <TextView
                 android:id="@+id/datetext"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:text="@string/drinkLogDate"
                 android:textColor="#00B2FF"
                 android:textSize="19dp"
                 android:gravity="left"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 />
 
             <TextView
                 android:id="@+id/intakevstargettext"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:text="@string/drinkLogintaketarget"
                 android:textColor="#00B2FF"
                 android:layout_weight="1"
@@ -82,15 +81,11 @@
                 android:textSize="22dp" />
         </LinearLayout>
 
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/adViewDrinkLog"
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:layout_centerHorizontal="true"
-                ads:adSize="BANNER"
-                android:layout_weight=".5"
-                ads:adUnitId="ca-app-pub-2266797178837677/5486393546">
-            </com.google.android.gms.ads.AdView>
+            <com.inmobi.monetization.IMBanner
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:id="@+id/banner"
+                adSize="15" appId="9a37b437c9504a2190126009f07b6a67" />
 
         </LinearLayout>
     </FrameLayout>
@@ -103,4 +98,4 @@
         android:background="#FFFFFF" >
     </ListView>
 
-</android.support.v4.widget.DrawerLayout><!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/sqlview.xml -->
+</android.support.v4.widget.DrawerLayout><!-- From: file:/home/shubham/AndroidstudioProjects/waterbalancestudio/app/src/main/res/layout/sqlview.xml -->

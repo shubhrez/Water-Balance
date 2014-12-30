@@ -13,53 +13,65 @@
     <string name="adjustHotdayWorkout">Отрегулируйте напиток цель, нажав горячей день и тренировка кнопка</string>
     <string name="clickAddWater">нажмите \'+ \' для записи воды пьян</string>
     <string name="bodyMassIndex">тело масса индекс  :</string>
-    <string name="description">Водный баланс помогает вам контролировать ежедневное потребление воды и обеспечивает уведомления, чтобы напомнить вам выпить water.It также обеспечивает ваш индекс массы тела, чтобы сохранить чек на ваш вес.</string>
+    <string name="description">Водный баланс помогает вам контролировать ежедневное потребление воды и обеспечивает уведомления, чтобы напомнить вам выпить water.It также обеспечивает ваш индекс массы тела Для управления вашей вес</string>
     <string name="benefit_tip">Преимущества и Советы</string>
     <string name="tip1">Регулирует температуру тела</string>
     <string name="tip2">Снимает усталость</string>
-    <string name="tip3">Помогает в пищеварении и запорах</string>
+    <string name="tip3">помогает в пищеварении</string>
     <string name="tip4">Способствует здоровой кожи</string>
-    <string name="tip5">Приливы токсины</string>
-    <string name="tip6">Потеря СПИД Вес</string>
-    <string name="tip7">Oxigenates крови и легких</string>
+    <string name="tip5">очищает от токсинов</string>
+    <string name="tip6">помогает в потере веса</string>
+    <string name="tip7">Oxigenates крови и Легкие</string>
     <string name="feedback_name">Имя:</string>
     <string name="feedback_subject">Тема:</string>
     <string name="feedback">Обратная связь:</string>
     <string name="sendmail">Отправить на e-mail</string>
     <string name="drinkLogDate">дата</string>
-    <string name="drinkLogintaketarget">Водозабор / Target</string>
+    <string name="drinkLogintaketarget">напиток запись</string>
     <string name="statistics_intake">Средняя суточная доза воды</string>
-    <string name="statistics_target">Средний дневной напиток Target</string>
+    <string name="statistics_target">Средний дневной напиток цель</string>
     <string name="statistics_weight">Ваш текущий вес</string>
-    <string name="statistics_range">Ваш идеальный вес Range</string>
-    <string name="noentry">Не нет записей</string>
+    <string name="statistics_range">Ваш идеальный вес диапазон</string>
+    <string name="noentry">нет записей</string>
     <string name="bmiunderweight">Вы под тяжестью - увеличение веса</string>
     <string name="bmiidealweight">Ваш вес Нормаль-в пределах лимитов,</string>
     <string name="bmioverweight">Вы с лишним весом - Снижение веса</string>
     <string name="bmiobese">Предупреждение: вы ожирением - Снижение веса</string>
     <string name="titleHome">домой</string>
-    <string name="titleDrinkLog">напиток регистрировать</string>
+    <string name="titleDrinkLog">напиток запись</string>
     <string name="titleStatistics">статистика</string>
     <string name="titleFeedback">обратная связь</string>
     <string name="titleAbout">около</string>
+    <string name="weight">вес</string>
+    <string name="height">высота</string>
+    <string name="addWaterAlertTitle">Выберите Стекло</string>
+    <string name="weightHeightAlertTitle">Введите данные</string>
+    <string name="addWaterAlertButton">отменить</string>
+    <string name="weightHeightAlertButton">сделано</string>
+    <string name="kgText">kg - Килограмм.</string>
+    <string name="lbText">lb - фунт</string>
+    <string name="cmText">cm - Сантиметр.</string>
+    <string name="ftinText">ft-in - Фут дюйм</string>
+    <string name="mlText">ML - миллилитр</string>
+    <string name="unitsText">единицы конвент</string>
 
     <string-array name="planets">
         <item>домой</item>
-        <item>напиток регистрировать</item>
+        <item>напиток запись</item>
         <item>статистика</item>
         <item>около</item>
         <item>обратная связь</item>
     </string-array>
     <string-array name="planets_about">
         <item>домой</item>
-        <item>напиток регистрировать</item>
+        <item>напиток запись</item>
         <item>статистика</item>
         <item>обратная связь</item>
     </string-array>
 
     <string-array name="planets_feedback">
         <item>домой</item>
-        <item>напиток регистрировать</item>
+        <item>напиток запись</item>
         <item>статистика</item>
         <item>около</item>
     </string-array>
@@ -80,7 +92,7 @@
 
     <string-array name="planets_statistics">
         <item>домой</item>
-        <item>напиток регистрировать</item>
+        <item>напиток запись</item>
         <item>около</item>
         <item>обратная связь</item>
     </string-array>

@@ -41,9 +41,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
 
 public class MainActivity extends Activity implements OnItemClickListener {
 
@@ -111,12 +108,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 	Integer amountDrunk;
 	Integer targetWater;
-	static TextView bodyMassIndex,bodyMassIndexText, bodyMassIndexTip,drinkTarget;
+	static TextView bodyMassIndex, bodyMassIndexTip,drinkTarget;
     TextView adjustDrinkTargetText,hotdayText,workoutText,addWaterText;
     private static TextView waterDrunkVsTarget;
-	CheckBox hot_Day, workOut;
-	static Button hotday_button, workout_button, drink_log_button,
-			benefit_button;
+	static Button hotday_button, workout_button,unitConventionButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -124,20 +119,11 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		setContentView(R.layout.activity_main);
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Dosis-SemiBold.ttf");
         Typeface custom_font1 = Typeface.createFromAsset(getAssets(), "fonts/Dosis-Medium.ttf");
-        AdView mAdView = (AdView) this.findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
-        String bmiunderweight = getResources().getString(R.string.bmiunderweight);
-        String bmiidealweight = getResources().getString(R.string.bmiidealweight);
-        String bmioverweight = getResources().getString(R.string.bmioverweight);
-        String bmiobese = getResources().getString(R.string.bmiobese);
 
         drinkTarget = (TextView) findViewById(R.id.drinkTarget);
         bodyMassIndex = (TextView) findViewById(R.id.bmi);
         bodyMassIndexTip = (TextView) findViewById(R.id.tip);
         waterDrunkVsTarget = (TextView) findViewById(R.id.amount_of_water_drunk_vs_target);
-        bodyMassIndexText = (TextView) findViewById(R.id.bodyMassIndexText);
         adjustDrinkTargetText = (TextView) findViewById(R.id.adjustDrinkTargetText);
         hotdayText = (TextView) findViewById(R.id.hotdayText);
         workoutText = (TextView) findViewById(R.id.workoutText);
@@ -145,7 +131,6 @@ public class MainActivity extends Activity implements OnItemClickListener {
         drinkTarget.setTypeface(custom_font);
         bodyMassIndex.setTypeface(custom_font);
         bodyMassIndexTip.setTypeface(custom_font1);
-        bodyMassIndexText.setTypeface(custom_font);
         waterDrunkVsTarget.setTypeface(custom_font);
         adjustDrinkTargetText.setTypeface(custom_font);
         hotdayText.setTypeface(custom_font);
@@ -154,7 +139,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
         singlelist = new ArrayList<HashMap<String, Object>>();
 		waterDrunkProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
 		addWater = (Button) findViewById(R.id.add_water_button);
-
+        unitConventionButton = (Button) findViewById(R.id.unitConventionButton);
 
 
         waterDrunkProgressBar.setMax(targetAmountOfWater);
@@ -278,7 +263,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			public void onClick(View v) {
 				AlertDialog.Builder builder = new AlertDialog.Builder(
 						MainActivity.this);
-				builder.setTitle("Select a glass");
+				builder.setTitle(R.string.addWaterAlertTitle);
 				builder.setAdapter(adapter,
 						new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog, int item) {
@@ -315,7 +300,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 							}
 						});
 
-				builder.setNegativeButton("Cancel",
+				builder.setNegativeButton(R.string.addWaterAlertButton,
 						new DialogInterface.OnClickListener() {
 
 							@Override
@@ -331,7 +316,34 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 		});
 
-		weightInKg = pref.getInt(WEIGHT_KEY_KG, 0);
+          unitConventionButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(
+                        MainActivity.this);
+                builder.setTitle(R.string.unitsText);
+                builder.setCancelable(true);
+                LayoutInflater inflater = getLayoutInflater();
+                View unitConventionLayout = inflater.inflate(R.layout.unit_convention, null);
+                builder.setView(unitConventionLayout);
+                builder.setNegativeButton(R.string.addWaterAlertButton,
+                        new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which) {
+                                dialog.cancel();
+                            }
+                        });
+
+                builder.show();
+            }
+
+        });
+
+
+
+        weightInKg = pref.getInt(WEIGHT_KEY_KG, 0);
 		weightInPound = pref.getInt(WEIGHT_KEY_POUND, 0);
 		amountOfWaterDrunk = pref.getInt(AMOUNTDRUNK, 0);
 
@@ -377,7 +389,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 	}
 
-	public static void setBMI() {
+	public void setBMI() {
 		weightInKg = pref.getInt(WEIGHT_KEY_KG, 0);
 		if (weightInKg == 0) {
 			weightInKg = pref.getInt(WEIGHT_KEY_POUND, 0);
@@ -396,7 +408,8 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		}
 
 		String bmi = String.valueOf(z);
-		bodyMassIndex.setText(bmi);
+        String string = getString(R.string.bodyMassIndex);
+		bodyMassIndex.setText(string + " " + bmi);
 
         if (z < 18.5) {
             bodyMassIndexTip.setText(R.string.bmiunderweight);
@@ -583,7 +596,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		} else {
 			builder.setCancelable(false);
 		}
-		builder.setTitle("Enter the details");
+		builder.setTitle(R.string.weightHeightAlertTitle);
 
 		weightUser = (EditText) layout.findViewById(R.id.weight);
 		heightUserFoot = (EditText) layout.findViewById(R.id.input_foot);
@@ -624,7 +637,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 		builder.setView(layout);
 
-		builder.setPositiveButton("Done",
+		builder.setPositiveButton(R.string.weightHeightAlertButton,
 				new DialogInterface.OnClickListener() {
 
 					@Override
@@ -703,7 +716,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
                             waterDrunkProgressBar.setMax(targetAmountOfWater);
                             waterDrunkProgressBar.setProgress(amountOfWaterDrunk);
                             dialog.dismiss();
-                            MainActivity.setBMI();
+                            setBMI();
                         } else {
                             Toast.makeText(getApplicationContext(),
                                     "Please enter height before preceeding",
@@ -751,7 +764,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
                             waterDrunkProgressBar.setMax(targetAmountOfWater);
                             waterDrunkProgressBar.setProgress(amountOfWaterDrunk);
                             dialog.dismiss();
-                            MainActivity.setBMI();
+                            setBMI();
                         } else {
                             Toast.makeText(getApplicationContext(),
                                     "Please enter height before preceeding",

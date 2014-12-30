@@ -16,7 +16,7 @@
     />
  <TextView 
      android:text="@string/title"
-     android:textSize="50dp"
+     android:textSize="45dp"
      android:id="@+id/label"
      android:textStyle="bold|italic"
      android:layout_width="fill_parent" 
@@ -27,4 +27,4 @@
  
 
 </LinearLayout>
-<!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/splash.xml -->
+<!-- From: file:/home/shubham/AndroidstudioProjects/waterbalancestudio/app/src/main/res/layout/splash.xml -->

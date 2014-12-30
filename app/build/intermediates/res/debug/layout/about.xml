@@ -36,7 +36,15 @@
 
                 <TextView
                     android:layout_width="fill_parent"
-                    android:layout_height="20dp" />
+                    android:layout_height="15dp"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="15dp"
+                    />
 
                 <View
                     android:layout_width="fill_parent"
@@ -143,4 +151,4 @@
         android:fontFamily="sans-serif-condensed" >
     </ListView>
 
-</android.support.v4.widget.DrawerLayout><!-- From: file:/home/shubham/AndroidstudioProjects/WaterBalance/app/src/main/res/layout/about.xml -->
+</android.support.v4.widget.DrawerLayout><!-- From: file:/home/shubham/AndroidstudioProjects/waterbalancestudio/app/src/main/res/layout/about.xml -->

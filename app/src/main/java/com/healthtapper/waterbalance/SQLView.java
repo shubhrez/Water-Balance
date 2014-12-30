@@ -3,10 +3,8 @@ package com.healthtapper.waterbalance;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
 import com.healthtapper.waterbalance.R;
+import com.inmobi.monetization.IMBanner;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -62,9 +60,8 @@ public class SQLView extends Activity implements OnItemClickListener{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sqlview);
-        AdView mAdView = (AdView) this.findViewById(R.id.adViewDrinkLog);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        IMBanner banner = (IMBanner) findViewById(R.id.banner);
+        banner.loadBanner();
 		ActionBar bar = getActionBar();
         String title = getResources().getString(R.string.titleDrinkLog);
         bar.setTitle(title);
