@@ -41,6 +41,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.inmobi.monetization.IMBanner;
+
 
 public class MainActivity extends Activity implements OnItemClickListener {
 
@@ -117,6 +119,8 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+        IMBanner banner = (IMBanner) findViewById(R.id.banner);
+        banner.loadBanner();
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Dosis-SemiBold.ttf");
         Typeface custom_font1 = Typeface.createFromAsset(getAssets(), "fonts/Dosis-Medium.ttf");
 

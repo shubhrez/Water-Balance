@@ -26,6 +26,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.inmobi.monetization.IMBanner;
 
 public class Statistics extends Activity implements OnItemClickListener {
 
@@ -50,6 +51,8 @@ public class Statistics extends Activity implements OnItemClickListener {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.statistics);
+        IMBanner banner = (IMBanner) findViewById(R.id.banner);
+        banner.loadBanner();
 		ActionBar bar = getActionBar();
         String title = getResources().getString(R.string.titleStatistics);
         bar.setTitle(title);

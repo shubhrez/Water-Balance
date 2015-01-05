@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#F0F0F0"
-            android:layout_weight="9"
+            android:layout_weight="7"
             android:orientation="vertical"
             android:padding="10dp" >
 
@@ -80,6 +80,14 @@
                 android:text="@string/noentry"
                 android:textSize="22dp" />
         </LinearLayout>
+
+
+            <com.inmobi.monetization.IMBanner
+                android:layout_width="320dp"
+                android:layout_height="60dp"
+                android:id="@+id/banner"
+                android:layout_gravity="center"
+                adSize="15" appId="9a37b437c9504a2190126009f07b6a67" />
 
         </LinearLayout>
     </FrameLayout>

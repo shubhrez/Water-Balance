@@ -7,6 +7,7 @@
     <FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/mainContent"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -21,6 +22,7 @@
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="5dp"
             tools:context="com.healthtapper.waterbalance.MainActivity" >
+
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -219,6 +221,13 @@
                 android:background="@drawable/rounded_corner_addbutton"
                 android:text="@string/unitsText"
             />
+
+            <com.inmobi.monetization.IMBanner
+                android:layout_width="320dp"
+                android:layout_height="50dp"
+                android:id="@+id/banner"
+                android:layout_gravity="center"
+                adSize="15" appId="9a37b437c9504a2190126009f07b6a67" />
 
 
         </LinearLayout>

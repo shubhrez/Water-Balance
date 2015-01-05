@@ -19,6 +19,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.inmobi.monetization.IMBanner;
+
 public class About extends Activity implements OnItemClickListener{
 
 	private DrawerLayout drawerLayout;
@@ -32,6 +34,8 @@ public class About extends Activity implements OnItemClickListener{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.about);
+        IMBanner banner = (IMBanner) findViewById(R.id.banner);
+        banner.loadBanner();
 		ActionBar bar = getActionBar();
         String title = getResources().getString(R.string.titleAbout);
         bar.setTitle(title);
