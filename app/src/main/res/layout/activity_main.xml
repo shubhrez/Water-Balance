@@ -80,7 +80,9 @@
                 android:layout_below="@+id/progress_bar_layout"
                 android:layout_weight="1"
                 android:background="#FFFFFF"
-                android:padding="5dp" >
+                android:padding="5dp"
+
+                >
 
                 <Button
                     android:id="@+id/hotday_button"
@@ -171,11 +173,25 @@
                 android:textSize="18dp" >
             </TextView>
 
+            <Button
+                android:id="@+id/unitConventionButton"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_height="22dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_addbutton"
+                android:text="@string/unitsText"
+                />
+
+
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="horizontal" />
+
 
             <RelativeLayout
 
@@ -210,17 +226,6 @@
 
             </RelativeLayout>
 
-            <Button
-                android:id="@+id/unitConventionButton"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:layout_height="22dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_corner_addbutton"
-                android:text="@string/unitsText"
-            />
 
             <com.inmobi.monetization.IMBanner
                 android:layout_width="320dp"

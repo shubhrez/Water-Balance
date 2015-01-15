@@ -459,7 +459,7 @@ containing a value of this type.
         public static final int avTarget=0x7f0c0050;
         public static final int avTargetText=0x7f0c004f;
         public static final int banner=0x7f0c0022;
-        public static final int bmi=0x7f0c0030;
+        public static final int bmi=0x7f0c0031;
         public static final int book_now=0x7f0c0010;
         public static final int bsentEmail=0x7f0c003a;
         public static final int button=0x7f0c0039;
@@ -516,7 +516,7 @@ containing a value of this type.
         public static final int production=0x7f0c0009;
         public static final int progress_bar=0x7f0c0027;
         public static final int progress_bar_layout=0x7f0c0024;
-        public static final int relativeLayout1=0x7f0c002f;
+        public static final int relativeLayout1=0x7f0c0030;
         public static final int sandbox=0x7f0c000a;
         public static final int satellite=0x7f0c0005;
         public static final int selectionDetails=0x7f0c000d;
@@ -525,7 +525,7 @@ containing a value of this type.
         public static final int strict_sandbox=0x7f0c000b;
         public static final int subject=0x7f0c0036;
         public static final int terrain=0x7f0c0006;
-        public static final int tip=0x7f0c0031;
+        public static final int tip=0x7f0c0032;
         public static final int tip1=0x7f0c001b;
         public static final int tip2=0x7f0c001c;
         public static final int tip3=0x7f0c001d;
@@ -534,7 +534,7 @@ containing a value of this type.
         public static final int tip6=0x7f0c0020;
         public static final int tip7=0x7f0c0021;
         public static final int title=0x7f0c0046;
-        public static final int unitConventionButton=0x7f0c0032;
+        public static final int unitConventionButton=0x7f0c002f;
         public static final int weight=0x7f0c003c;
         public static final int weightEdit=0x7f0c005b;
         public static final int workoutText=0x7f0c002c;

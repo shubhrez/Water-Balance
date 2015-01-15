@@ -144,7 +144,7 @@ int id avIntakeText 0x7f0c004d
 int id avTarget 0x7f0c0050
 int id avTargetText 0x7f0c004f
 int id banner 0x7f0c0022
-int id bmi 0x7f0c0030
+int id bmi 0x7f0c0031
 int id book_now 0x7f0c0010
 int id bsentEmail 0x7f0c003a
 int id button 0x7f0c0039
@@ -201,7 +201,7 @@ int id notification 0x7f0c005a
 int id production 0x7f0c0009
 int id progress_bar 0x7f0c0027
 int id progress_bar_layout 0x7f0c0024
-int id relativeLayout1 0x7f0c002f
+int id relativeLayout1 0x7f0c0030
 int id sandbox 0x7f0c000a
 int id satellite 0x7f0c0005
 int id selectionDetails 0x7f0c000d
@@ -210,7 +210,7 @@ int id spinner_weight 0x7f0c003d
 int id strict_sandbox 0x7f0c000b
 int id subject 0x7f0c0036
 int id terrain 0x7f0c0006
-int id tip 0x7f0c0031
+int id tip 0x7f0c0032
 int id tip1 0x7f0c001b
 int id tip2 0x7f0c001c
 int id tip3 0x7f0c001d
@@ -219,7 +219,7 @@ int id tip5 0x7f0c001f
 int id tip6 0x7f0c0020
 int id tip7 0x7f0c0021
 int id title 0x7f0c0046
-int id unitConventionButton 0x7f0c0032
+int id unitConventionButton 0x7f0c002f
 int id weight 0x7f0c003c
 int id weightEdit 0x7f0c005b
 int id workoutText 0x7f0c002c

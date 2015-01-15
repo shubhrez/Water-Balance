@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/home/shubham/AndroidstudioProjects/waterbalancestudio/app/libs/FlurryAnalytics-5.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9143ea9b390b4f6eeee3673533402669de23ab7e">
+        <dex dex="/home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/pre-dexed/debug/FlurryAnalytics-5.0.0-ed85e604cc0d3fdd7e28992c51b0b2f06ee117d2.jar" />
+    </item>
+    <item
         jar="/home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
         jumboMode="false"
         revision="21.1.2"

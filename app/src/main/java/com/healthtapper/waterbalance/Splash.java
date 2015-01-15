@@ -28,7 +28,7 @@ public class Splash extends Activity {
         FlurryAgent.setLogEnabled(false);
 
         // init Flurry
-        FlurryAgent.init(this, "QKKC676XMT2QRC9FV6DX");
+        FlurryAgent.init(Splash.this, "QKKC676XMT2QRC9FV6DX");
 
 		getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
 		ActionBar bar = getActionBar();
