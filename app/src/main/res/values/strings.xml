@@ -27,7 +27,7 @@
     <string name="feedback">Feedback :</string>
     <string name="sendmail">Send Email</string>
     <string name="drinkLogDate">Date</string>
-    <string name="drinkLogintaketarget">Water Intake/Target</string>
+    <string name="drinkLogintaketarget">Intake/Target</string>
     <string name="statistics_intake">Average Daily Water Intake</string>
     <string name="statistics_target">Average Daily Drink Target</string>
     <string name="statistics_weight">Your Current Weight</string>

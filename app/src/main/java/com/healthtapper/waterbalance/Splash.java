@@ -9,6 +9,7 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.flurry.android.FlurryAgent;
 import com.inmobi.commons.InMobi;
 import com.splunk.mint.Mint;
 
@@ -22,6 +23,13 @@ public class Splash extends Activity {
 		super.onCreate(savedInstanceState);
 		Mint.initAndStartSession(Splash.this, "acb78c23");
         InMobi.initialize(Splash.this, "9a37b437c9504a2190126009f07b6a67");
+
+        // configure Flurry
+        FlurryAgent.setLogEnabled(false);
+
+        // init Flurry
+        FlurryAgent.init(this, "QKKC676XMT2QRC9FV6DX");
+
 		getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
 		ActionBar bar = getActionBar();
 		bar.hide();

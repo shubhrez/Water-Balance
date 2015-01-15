@@ -34,7 +34,7 @@
             <TextView
                 android:id="@+id/datetext"
                 android:layout_width="fill_parent"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:text="@string/drinkLogDate"
                 android:textColor="#00B2FF"
                 android:textSize="19dp"
@@ -45,7 +45,7 @@
             <TextView
                 android:id="@+id/intakevstargettext"
                 android:layout_width="fill_parent"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:text="@string/drinkLogintaketarget"
                 android:textColor="#00B2FF"
                 android:layout_weight="1"

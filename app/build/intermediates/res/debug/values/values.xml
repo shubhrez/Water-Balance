@@ -145,7 +145,7 @@
     <string name="drawer_close"/>
     <string name="drawer_open"/>
     <string name="drinkLogDate">Date</string>
-    <string name="drinkLogintaketarget">Water Intake/Target</string>
+    <string name="drinkLogintaketarget">Intake/Target</string>
     <string name="drinktarget">Drink Target</string>
     <string name="feedback">Feedback :</string>
     <string name="feedback_name">Name :</string>
