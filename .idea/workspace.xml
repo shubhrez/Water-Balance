@@ -161,8 +161,8 @@
       <file leaf-file-name="Splash.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Splash.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5632411" vertical-offset="0" max-vertical-offset="825">
-              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.11857708" vertical-offset="0" max-vertical-offset="825">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -2108,8 +2108,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Splash.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5632411" vertical-offset="0" max-vertical-offset="825">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.11857708" vertical-offset="0" max-vertical-offset="825">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding />
         </state>
       </provider>
