@@ -106,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Statistics.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Statistics.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Statistics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5491803" vertical-offset="639" max-vertical-offset="3840">
+            <state vertical-scroll-proportion="0.0" vertical-offset="639" max-vertical-offset="3840">
               <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
               <folding>
                 <element signature="e#2607#2657#0" expanded="true" />
@@ -177,11 +177,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1031" max-vertical-offset="11385">
-              <caret line="124" column="7" selection-start-line="124" selection-start-column="7" selection-end-line="124" selection-end-column="96" />
+            <state vertical-scroll-proportion="0.420765" vertical-offset="1031" max-vertical-offset="11385">
+              <caret line="120" column="46" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -1181,8 +1181,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Splash.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/bmipage.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Statistics.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2068,26 +2068,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1538463" vertical-offset="2044" max-vertical-offset="3360">
-          <caret line="140" column="12" selection-start-line="140" selection-start-column="12" selection-end-line="140" selection-end-column="12" />
-          <folding>
-            <element signature="e#784#819#0" expanded="true" />
-            <element signature="e#853#888#0" expanded="true" />
-            <element signature="e#2529#2550#0" expanded="true" />
-            <element signature="e#4762#4791#0" expanded="true" />
-            <element signature="e#5315#5331#0" expanded="true" />
-            <element signature="e#5809#5826#0" expanded="true" />
-            <element signature="e#7074#7097#0" expanded="true" />
-            <element signature="e#7659#7678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/statistics.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.307693" vertical-offset="1030" max-vertical-offset="2790">
@@ -2135,17 +2115,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1031" max-vertical-offset="11385">
-          <caret line="124" column="7" selection-start-line="124" selection-start-column="7" selection-end-line="124" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Statistics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5491803" vertical-offset="639" max-vertical-offset="3840">
+        <state vertical-scroll-proportion="0.0" vertical-offset="639" max-vertical-offset="3840">
           <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
           <folding>
             <element signature="e#2607#2657#0" expanded="true" />
@@ -2157,6 +2129,34 @@
             <element signature="e#9308#9330#0" expanded="true" />
             <element signature="e#9387#9404#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1538463" vertical-offset="2044" max-vertical-offset="3360">
+          <caret line="140" column="12" selection-start-line="140" selection-start-column="12" selection-end-line="140" selection-end-column="12" />
+          <folding>
+            <element signature="e#784#819#0" expanded="true" />
+            <element signature="e#853#888#0" expanded="true" />
+            <element signature="e#2529#2550#0" expanded="true" />
+            <element signature="e#4762#4791#0" expanded="true" />
+            <element signature="e#5315#5331#0" expanded="true" />
+            <element signature="e#5809#5826#0" expanded="true" />
+            <element signature="e#7074#7097#0" expanded="true" />
+            <element signature="e#7659#7678#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.420765" vertical-offset="1031" max-vertical-offset="11385">
+          <caret line="120" column="46" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
