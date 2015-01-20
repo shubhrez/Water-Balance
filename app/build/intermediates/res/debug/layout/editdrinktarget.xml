@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="100"
+        >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="40"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Drink Target"
+        android:textSize="25dp"
+        />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="60"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:text="ML"
+            />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="100"
+            >
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Add Extra Water"
+                android:textSize="25dp"
+                />
+
+            <EditText
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="50dp"
+                />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="ML"
+                android:textSize="25dp"
+                />
+
+        </LinearLayout>
+
+
+</LinearLayout><!-- From: file:/home/shubham/AndroidstudioProjects/waterbalancestudio/app/src/main/res/layout/editdrinktarget.xml -->

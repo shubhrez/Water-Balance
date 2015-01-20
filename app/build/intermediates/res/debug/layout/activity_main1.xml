@@ -71,6 +71,19 @@
                     android:progressDrawable="@drawable/horizontal_progress_bar" />
 
 
+                <Button
+                    android:id="@+id/edittarget"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:text="Edit Target"
+                    android:textSize="15dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dp"
+                    android:background="#f0f0f0"
+                    android:layout_below="@+id/progress_bar"
+                    android:layout_alignParentRight="true"
+                    />
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -79,23 +92,23 @@
                 android:layout_alignLeft="@+id/progress_bar_layout"
                 android:layout_below="@+id/progress_bar_layout"
                 android:layout_weight="1"
-                android:background="#FFFFFF"
                 android:padding="5dp"
-
+                android:paddingBottom="0dp"
+                android:background="#ffffff"
                 >
 
                 <Button
                     android:id="@+id/hotday_button"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginBottom="10dp" />
+                     />
 
                 <Button
                     android:id="@+id/workout_button"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignTop="@+id/hotday_button"
                     android:layout_weight="1" />
@@ -109,39 +122,41 @@
                     android:layout_toLeftOf="@+id/workout_button"
                     android:layout_toRightOf="@+id/hotday_button"
                     android:fontFamily="sans-serif-medium"
+                    android:text="@string/adjustHotdayWorkout"
                     android:gravity="center"
                     android:textStyle="italic"
-                    android:text="@string/adjustHotdayWorkout"
                     android:textColor="#00B2FF"
                     android:textSize="14dp" />
 
                 <TextView
                     android:id="@+id/hotdayText"
-                    android:layout_width="60dp"
+                    android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:layout_alignLeft="@+id/hotday_button"
-                    android:layout_below="@+id/workout_button"
+                    android:layout_below="@+id/hotday_button"
                     android:gravity="center"
                     android:textColor="#00B2FF"
                     android:text="@string/hotday"
-                    android:textSize="13dp" />
+                    android:textStyle="bold"
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/workoutText"
-                    android:layout_width="60dp"
+                    android:layout_width="70dp"
                     android:layout_height="40dp"
                     android:layout_below="@+id/workout_button"
                     android:textColor="#00B2FF"
                     android:layout_alignLeft="@+id/workout_button"
                     android:gravity="center"
                     android:text="@string/workout"
-                    android:textSize="13dp" />
+                    android:textStyle="bold"
+                    android:textSize="15dp" />
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="4"
                 android:orientation="horizontal" />
 
 

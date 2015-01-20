@@ -54,7 +54,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	/*
 	 * button to add water
 	 */
-	private Button addWater;
+	private Button addWater,edittarget;
 
 	/*
 	 * text view to show amount of water drunk by user and the target amount of
@@ -143,6 +143,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
         singlelist = new ArrayList<HashMap<String, Object>>();
 		waterDrunkProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
 		addWater = (Button) findViewById(R.id.add_water_button);
+        edittarget = (Button) findViewById(R.id.edittarget);
         unitConventionButton = (Button) findViewById(R.id.unitConventionButton);
 
 
@@ -261,6 +262,32 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 			}
 		});
+
+        // Edit Drink Target on Click Listener Defined
+
+        edittarget.setOnClickListener(new OnClickListener() {
+                                          @Override
+                                          public void onClick(View v) {
+                                              LayoutInflater inflater = LayoutInflater.from(MainActivity.this);
+                                              View layout = inflater.inflate(R.layout.editdrinktarget, null);
+
+
+                                              AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                                              builder.setCancelable(true);
+                                              builder.setView(layout);
+                                              //               unlocktext = (TextView) layout.findViewById(R.id.unlocktext);
+                                              builder.setPositiveButton("Add",
+                                                      new DialogInterface.OnClickListener() {
+                                                          @Override
+                                                          public void onClick(DialogInterface dialog,
+                                                                              int which) {
+
+                                                          }
+                                                      });
+                                              builder.show();
+                                          }
+                                      });
+
 
 		addWater.setOnClickListener(new OnClickListener() {
 			@Override
