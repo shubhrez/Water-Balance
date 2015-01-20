@@ -1,7 +1,7 @@
 /home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/classes/release
 /home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/pre-dexed/release/support-annotations-21.0.0-1a29d6b4037aea2a57e28bc90cc6081b098452b2.jar
 /home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/pre-dexed/release/splunk-mint-4.0.6-f9a25b182a23af152e5d9ebd1c08d10a8dfdc2dc.jar
-/home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/pre-dexed/release/FlurryAnalytics-5.0.0-ed85e604cc0d3fdd7e28992c51b0b2f06ee117d2.jar
+/home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/pre-dexed/release/FlurryAnalytics-5.1.0-5804ab17b4613474fbd06152bf1d20d4e5f83822.jar
 /home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/pre-dexed/release/internal_impl-21.0.0-22c5a356c004341a513504e277b60d2c96498509.jar
 /home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/pre-dexed/release/InMobi-4.5.2-76536d195280e11e0864ceb5a689e9e15e5925ee.jar
 /home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/pre-dexed/release/classes-74ca1a2a4da5f4abb7d00c31ffadea6e282a6b22.jar

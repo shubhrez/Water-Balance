@@ -38,19 +38,27 @@ public class Statistics extends Activity implements OnItemClickListener {
 	private static final String TAG_WEIGHT = "weight";
 	private static final String TAG_INTAKE = "intake";
 	private static final String TAG_TARGET = "target";
-	TextView avIntake, avTarget, currentWeight, idealWeight,avIntakeText, avTargetText, currentWeightText, idealWeightText;
+    public static final String WEIGHT_KEY_KG = "weightKeyInKg";
+    public static final String WEIGHT_KEY_POUND = "weightKeyInPound";
+    public static final String HEIGHT_KEY_CM = "heightKeyInCm";
+    public static final String HEIGHT_KEY_FOOT = "heightKeyInFoot";
+    public static final String HEIGHT_KEY_INCH = "heightKeyInInch";
+	TextView avIntake,avTarget, currentWeight, idealWeight,avIntakeText, avTargetText, currentWeightText, idealWeightText;
+    TextView bmi,tip;
 	ArrayList<HashMap<String, String>> oslist = new ArrayList<HashMap<String, String>>();
 
 	private DrawerLayout drawerLayout;
 	private ListView listView;
 	private String[] planets_statistics;
 	private ActionBarDrawerToggle drawerListener;
+    int weightInKg,heightInCm,heightInInch,heightInFoot;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.statistics);
+		setContentView(R.layout.bmipage);
+        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Dosis-Medium.ttf");
         IMBanner banner = (IMBanner) findViewById(R.id.banner);
         banner.loadBanner();
 		ActionBar bar = getActionBar();
@@ -69,7 +77,10 @@ public class Statistics extends Activity implements OnItemClickListener {
         avTargetText = (TextView) findViewById(R.id.avTargetText);
         currentWeightText = (TextView) findViewById(R.id.currentWeightText);
         idealWeightText = (TextView) findViewById(R.id.idealWeightText);
-
+        bmi = (TextView) findViewById(R.id.bmi);
+        tip = (TextView) findViewById(R.id.tip);
+        bmi.setTypeface(custom_font);
+        tip.setTypeface(custom_font);
         avIntake.setTypeface(custom_font);
         avIntakeText.setTypeface(custom_font);
         avTarget.setTypeface(custom_font);
@@ -174,6 +185,39 @@ public class Statistics extends Activity implements OnItemClickListener {
 
 	}
 
+    public void setBMI() {
+        weightInKg = MainActivity.pref.getInt(WEIGHT_KEY_KG, 0);
+        if (weightInKg == 0) {
+            weightInKg = MainActivity.pref.getInt(WEIGHT_KEY_POUND, 0);
+            weightInKg = (int) (0.453 * weightInKg);
+        }
+        heightInCm = MainActivity.pref.getInt(HEIGHT_KEY_CM, 0);
+        if (heightInCm == 0) {
+            heightInFoot = MainActivity.pref.getInt(HEIGHT_KEY_FOOT, 0);
+            heightInInch = MainActivity.pref.getInt(HEIGHT_KEY_INCH, 0);
+            heightInCm = (int) (heightInFoot * 30.48 + heightInInch * 2.54);
+        }
+
+        int z = 0;
+        if (heightInCm != 0) {
+            z = (int) ((weightInKg * 10000) / (heightInCm * heightInCm));
+        }
+
+        String bmiText = String.valueOf(z);
+        String string = getString(R.string.bodyMassIndex);
+        bmi.setText(string + " " + bmiText);
+
+        if (z < 18.5) {
+            tip.setText(R.string.bmiunderweight);
+        } else if (z >= 18.5 && z < 24.9) {
+            tip.setText(R.string.bmiidealweight);
+        } else if (z >= 25 && z < 29.9) {
+            tip.setText(R.string.bmioverweight);
+        } else if (z >= 30) {
+            tip.setText(R.string.bmiobese);
+        }
+    }
+
 
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
@@ -216,7 +260,13 @@ public class Statistics extends Activity implements OnItemClickListener {
 		return true;
 	}
 
-//    @Override
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setBMI();
+    }
+
+    //    @Override
 //    protected void onPause() {
 //        // TODO Auto-generated method stub
 //        super.onPause();

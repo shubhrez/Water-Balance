@@ -84,7 +84,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	public static final String KEY_IMAGE = "image";
 	ArrayList<HashMap<String, Object>> singlelist = new ArrayList<HashMap<String, Object>>();
 
-	private static SharedPreferences pref;
+	public static SharedPreferences pref;
 
 	public static final String WEIGHT_KEY_KG = "weightKeyInKg";
 	public static final String WEIGHT_KEY_POUND = "weightKeyInPound";
@@ -125,16 +125,16 @@ public class MainActivity extends Activity implements OnItemClickListener {
         Typeface custom_font1 = Typeface.createFromAsset(getAssets(), "fonts/Dosis-Medium.ttf");
 
         drinkTarget = (TextView) findViewById(R.id.drinkTarget);
-        bodyMassIndex = (TextView) findViewById(R.id.bmi);
-        bodyMassIndexTip = (TextView) findViewById(R.id.tip);
+//        bodyMassIndex = (TextView) findViewById(R.id.bmi);
+//        bodyMassIndexTip = (TextView) findViewById(R.id.tip);
         waterDrunkVsTarget = (TextView) findViewById(R.id.amount_of_water_drunk_vs_target);
         adjustDrinkTargetText = (TextView) findViewById(R.id.adjustDrinkTargetText);
         hotdayText = (TextView) findViewById(R.id.hotdayText);
         workoutText = (TextView) findViewById(R.id.workoutText);
         addWaterText = (TextView) findViewById(R.id.addWaterText);
         drinkTarget.setTypeface(custom_font);
-        bodyMassIndex.setTypeface(custom_font);
-        bodyMassIndexTip.setTypeface(custom_font1);
+//4        bodyMassIndex.setTypeface(custom_font);
+//5        bodyMassIndexTip.setTypeface(custom_font1);
         waterDrunkVsTarget.setTypeface(custom_font);
         adjustDrinkTargetText.setTypeface(custom_font);
         hotdayText.setTypeface(custom_font);
@@ -169,7 +169,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		}
 
 		// bmiRange = (Button) findViewById(R.id.tip);
-		setBMI();
+//1		setBMI();
 
 		notification = pref.getInt(NOTIFICATION, 1);
 		if (notification != 0) {
@@ -393,38 +393,38 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 	}
 
-	public void setBMI() {
-		weightInKg = pref.getInt(WEIGHT_KEY_KG, 0);
-		if (weightInKg == 0) {
-			weightInKg = pref.getInt(WEIGHT_KEY_POUND, 0);
-			weightInKg = (int) (0.453 * weightInKg);
-		}
-		heightInCm = pref.getInt(HEIGHT_KEY_CM, 0);
-		if (heightInCm == 0) {
-			heightInFoot = pref.getInt(HEIGHT_KEY_FOOT, 0);
-			heightInInch = pref.getInt(HEIGHT_KEY_INCH, 0);
-			heightInCm = (int) (heightInFoot * 30.48 + heightInInch * 2.54);
-		}
-
-		int z = 0;
-		if (heightInCm != 0) {
-			z = (int) ((weightInKg * 10000) / (heightInCm * heightInCm));
-		}
-
-		String bmi = String.valueOf(z);
-        String string = getString(R.string.bodyMassIndex);
-		bodyMassIndex.setText(string + " " + bmi);
-
-        if (z < 18.5) {
-            bodyMassIndexTip.setText(R.string.bmiunderweight);
-        } else if (z >= 18.5 && z < 24.9) {
-            bodyMassIndexTip.setText(R.string.bmiidealweight);
-        } else if (z >= 25 && z < 29.9) {
-            bodyMassIndexTip.setText(R.string.bmioverweight);
-        } else if (z >= 30) {
-            bodyMassIndexTip.setText(R.string.bmiobese);
-        }
-	}
+//	public void setBMI() {
+//		weightInKg = pref.getInt(WEIGHT_KEY_KG, 0);
+//		if (weightInKg == 0) {
+//			weightInKg = pref.getInt(WEIGHT_KEY_POUND, 0);
+//			weightInKg = (int) (0.453 * weightInKg);
+//		}
+//		heightInCm = pref.getInt(HEIGHT_KEY_CM, 0);
+//		if (heightInCm == 0) {
+//			heightInFoot = pref.getInt(HEIGHT_KEY_FOOT, 0);
+//			heightInInch = pref.getInt(HEIGHT_KEY_INCH, 0);
+//			heightInCm = (int) (heightInFoot * 30.48 + heightInInch * 2.54);
+//		}
+//
+//		int z = 0;
+//		if (heightInCm != 0) {
+//			z = (int) ((weightInKg * 10000) / (heightInCm * heightInCm));
+//		}
+//
+//		String bmi = String.valueOf(z);
+//        String string = getString(R.string.bodyMassIndex);
+//		bodyMassIndex.setText(string + " " + bmi);
+//
+//        if (z < 18.5) {
+//            bodyMassIndexTip.setText(R.string.bmiunderweight);
+//        } else if (z >= 18.5 && z < 24.9) {
+//            bodyMassIndexTip.setText(R.string.bmiidealweight);
+//        } else if (z >= 25 && z < 29.9) {
+//            bodyMassIndexTip.setText(R.string.bmioverweight);
+//        } else if (z >= 30) {
+//            bodyMassIndexTip.setText(R.string.bmiobese);
+//        }
+//	}
 
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
@@ -720,7 +720,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
                             waterDrunkProgressBar.setMax(targetAmountOfWater);
                             waterDrunkProgressBar.setProgress(amountOfWaterDrunk);
                             dialog.dismiss();
-                            setBMI();
+    //2                        setBMI();
                         } else {
                             Toast.makeText(getApplicationContext(),
                                     "Please enter height before preceeding",
@@ -768,7 +768,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
                             waterDrunkProgressBar.setMax(targetAmountOfWater);
                             waterDrunkProgressBar.setProgress(amountOfWaterDrunk);
                             dialog.dismiss();
-                            setBMI();
+         //3                   setBMI();
                         } else {
                             Toast.makeText(getApplicationContext(),
                                     "Please enter height before preceeding",

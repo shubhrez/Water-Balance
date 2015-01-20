@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="/home/shubham/AndroidstudioProjects/waterbalancestudio/app/libs/FlurryAnalytics-5.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="9143ea9b390b4f6eeee3673533402669de23ab7e">
-        <dex dex="/home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/pre-dexed/debug/FlurryAnalytics-5.0.0-ed85e604cc0d3fdd7e28992c51b0b2f06ee117d2.jar" />
-    </item>
-    <item
         jar="/home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -42,6 +35,13 @@
         revision="21.1.2"
         sha1="686344a780033e4ba22b926cd225f8d4941247e6">
         <dex dex="/home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/pre-dexed/debug/classes-74ca1a2a4da5f4abb7d00c31ffadea6e282a6b22.jar" />
+    </item>
+    <item
+        jar="/home/shubham/AndroidstudioProjects/waterbalancestudio/app/libs/FlurryAnalytics-5.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ee10ddd768ed27510e47b14a4360d5646a6d853">
+        <dex dex="/home/shubham/AndroidstudioProjects/waterbalancestudio/app/build/intermediates/pre-dexed/release/FlurryAnalytics-5.1.0-5804ab17b4613474fbd06152bf1d20d4e5f83822.jar" />
     </item>
     <item
         jar="/home/shubham/AndroidstudioProjects/waterbalancestudio/app/libs/splunk-mint-4.0.6.jar"
