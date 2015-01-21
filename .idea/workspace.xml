@@ -45,19 +45,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.307693" vertical-offset="1375" max-vertical-offset="3840">
-              <caret line="113" column="31" selection-start-line="113" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bmipage.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/bmipage.xml">
           <provider editor-type-id="android-designer">
@@ -80,50 +67,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workout_on.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/workout_on.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Statistics.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Statistics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1230" max-vertical-offset="4230">
-              <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1387" max-vertical-offset="3840">
+              <caret line="129" column="43" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootReceiverNotification.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/BootReceiverNotification.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="570">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main1.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="activity_main1.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main1.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0" vertical-offset="2170" max-vertical-offset="3585">
-              <caret line="162" column="12" selection-start-line="162" selection-start-column="12" selection-end-line="162" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.48478702" vertical-offset="1126" max-vertical-offset="3630">
+              <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
               <folding>
                 <element signature="e#784#819#0" expanded="true" />
                 <element signature="e#853#888#0" expanded="true" />
                 <element signature="e#2529#2550#0" expanded="true" />
-                <element signature="e#5234#5263#0" expanded="true" />
-                <element signature="e#5878#5894#0" expanded="true" />
-                <element signature="e#6417#6434#0" expanded="true" />
-                <element signature="e#7727#7750#0" expanded="true" />
-                <element signature="e#8312#8331#0" expanded="true" />
+                <element signature="e#5803#5832#0" expanded="true" />
+                <element signature="e#6447#6463#0" expanded="true" />
+                <element signature="e#6986#7003#0" expanded="true" />
+                <element signature="e#8296#8319#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,8 +104,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.9615383" vertical-offset="805" max-vertical-offset="1365">
-              <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+            <state vertical-scroll-proportion="-17.807692" vertical-offset="467" max-vertical-offset="1620">
+              <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -148,56 +117,91 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.76923" vertical-offset="359" max-vertical-offset="1920">
-              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+            <state vertical-scroll-proportion="-9.269231" vertical-offset="359" max-vertical-offset="1920">
+              <caret line="40" column="38" selection-start-line="39" selection-start-column="12" selection-end-line="40" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workout_off.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/workout_off.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="Splash.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Splash.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+              <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9085366" vertical-offset="3228" max-vertical-offset="12285">
-              <caret line="286" column="61" selection-start-line="286" selection-start-column="61" selection-end-line="286" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="7106" max-vertical-offset="12615">
+              <caret line="528" column="16" selection-start-line="528" selection-start-column="16" selection-end-line="528" selection-end-column="16" />
               <folding>
                 <element signature="e#2632#2657#0" expanded="true" />
-                <element signature="e#6894#6910#0" expanded="true" />
-                <element signature="e#7294#8654#0" expanded="true" />
-                <element signature="e#8649#8650#0" expanded="true" />
-                <element signature="e#8693#10071#0" expanded="true" />
-                <element signature="e#10066#10067#0" expanded="true" />
-                <element signature="e#10169#11630#0" expanded="true" />
-                <element signature="e#11589#11590#0" expanded="true" />
-                <element signature="e#11665#13498#0" expanded="true" />
-                <element signature="e#11841#11868#0" expanded="true" />
-                <element signature="e#11909#13234#0" expanded="true" />
-                <element signature="e#13225#13226#0" expanded="true" />
-                <element signature="e#13268#13296#0" expanded="true" />
-                <element signature="e#13492#13493#0" expanded="true" />
-                <element signature="e#13552#14538#0" expanded="true" />
-                <element signature="e#13788#13806#0" expanded="true" />
-                <element signature="e#14108#14136#0" expanded="true" />
-                <element signature="e#14162#14478#0" expanded="true" />
-                <element signature="e#14451#14452#0" expanded="true" />
-                <element signature="e#14526#14527#0" expanded="true" />
-                <element signature="e#15448#15469#0" expanded="true" />
-                <element signature="e#15475#15495#0" expanded="true" />
-                <element signature="e#20323#20367#0" expanded="true" />
-                <element signature="e#23241#23272#0" expanded="true" />
-                <element signature="e#24768#24800#0" expanded="true" />
-                <element signature="e#24806#24969#0" expanded="true" />
-                <element signature="e#24962#24963#0" expanded="true" />
-                <element signature="e#25228#32916#0" expanded="true" />
-                <element signature="e#32902#32903#0" expanded="true" />
+                <element signature="e#7018#7034#0" expanded="true" />
+                <element signature="e#7418#8778#0" expanded="true" />
+                <element signature="e#8773#8774#0" expanded="true" />
+                <element signature="e#8817#10195#0" expanded="true" />
+                <element signature="e#10190#10191#0" expanded="true" />
+                <element signature="e#10293#13551#0" expanded="true" />
+                <element signature="e#11955#13403#0" expanded="true" />
+                <element signature="e#13346#13347#0" expanded="true" />
+                <element signature="e#13510#13511#0" expanded="true" />
+                <element signature="e#13586#15664#0" expanded="true" />
+                <element signature="e#13762#13789#0" expanded="true" />
+                <element signature="e#13830#15262#0" expanded="true" />
+                <element signature="e#15253#15254#0" expanded="true" />
+                <element signature="e#15296#15324#0" expanded="true" />
+                <element signature="e#15658#15659#0" expanded="true" />
+                <element signature="e#15718#16704#0" expanded="true" />
+                <element signature="e#15954#15972#0" expanded="true" />
+                <element signature="e#16274#16302#0" expanded="true" />
+                <element signature="e#16328#16644#0" expanded="true" />
+                <element signature="e#16617#16618#0" expanded="true" />
+                <element signature="e#16692#16693#0" expanded="true" />
+                <element signature="e#17614#17635#0" expanded="true" />
+                <element signature="e#17641#17661#0" expanded="true" />
+                <element signature="e#22525#22569#0" expanded="true" />
+                <element signature="e#25443#25474#0" expanded="true" />
+                <element signature="e#26970#27002#0" expanded="true" />
+                <element signature="e#27008#27171#0" expanded="true" />
+                <element signature="e#27164#27165#0" expanded="true" />
+                <element signature="e#27430#35188#0" expanded="true" />
+                <element signature="e#35174#35175#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotificationDisplayer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/NotificationDisplayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="645">
+              <caret line="45" column="66" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataEntryReceiver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/DataEntryReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="660">
+              <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataEntry.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/DataEntry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1195,10 +1199,11 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Splash.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Statistics.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/bmipage.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/editdrinktarget.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/editdrinktarget.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/NotificationDisplayer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main1.xml" />
       </list>
     </option>
   </component>
@@ -1373,6 +1378,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="raw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="waterbalancestudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="waterbalancestudio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1477,6 +1512,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
       <recent name="$PROJECT_DIR$/app/libs" />
       <recent name="$PROJECT_DIR$/app/src/main/assets/fonts" />
     </key>
@@ -1662,7 +1698,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1674,14 +1710,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15580286" sideWeight="0.6195393" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26748654" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26748654" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28775835" sideWeight="0.49960285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.49960285" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18153846" sideWeight="0.7752184" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14" sideWeight="0.7752184" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32750398" sideWeight="0.5409055" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31360492" sideWeight="0.7966102" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30053803" sideWeight="0.7966102" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1784,13 +1820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/DataEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
@@ -1812,13 +1841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/NotificationDisplayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1911,13 +1933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="600">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/DataEntryReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="660">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2027,14 +2042,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Splash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="825">
-          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/body_mass_index_range.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -2073,14 +2080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Statistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="639" max-vertical-offset="3840">
-          <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/workout_on.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2098,37 +2097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.307693" vertical-offset="1375" max-vertical-offset="3840">
           <caret line="113" column="31" selection-start-line="113" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main1.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0" vertical-offset="2170" max-vertical-offset="3585">
-          <caret line="162" column="12" selection-start-line="162" selection-start-column="12" selection-end-line="162" selection-end-column="12" />
-          <folding>
-            <element signature="e#784#819#0" expanded="true" />
-            <element signature="e#853#888#0" expanded="true" />
-            <element signature="e#2529#2550#0" expanded="true" />
-            <element signature="e#5234#5263#0" expanded="true" />
-            <element signature="e#5878#5894#0" expanded="true" />
-            <element signature="e#6417#6434#0" expanded="true" />
-            <element signature="e#7727#7750#0" expanded="true" />
-            <element signature="e#8312#8331#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/height_weight_input.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.76923" vertical-offset="359" max-vertical-offset="1920">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -2153,51 +2121,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/editdrinktarget.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Splash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="202" max-vertical-offset="825">
+          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/Statistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1387" max-vertical-offset="3840">
+          <caret line="129" column="43" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/height_weight_input.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9615383" vertical-offset="805" max-vertical-offset="1365">
-          <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+        <state vertical-scroll-proportion="-9.269231" vertical-offset="359" max-vertical-offset="1920">
+          <caret line="40" column="38" selection-start-line="39" selection-start-column="12" selection-end-line="40" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/DataEntryReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="660">
+          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/DataEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9085366" vertical-offset="3228" max-vertical-offset="12285">
-          <caret line="286" column="61" selection-start-line="286" selection-start-column="61" selection-end-line="286" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="7106" max-vertical-offset="12615">
+          <caret line="528" column="16" selection-start-line="528" selection-start-column="16" selection-end-line="528" selection-end-column="16" />
           <folding>
             <element signature="e#2632#2657#0" expanded="true" />
-            <element signature="e#6894#6910#0" expanded="true" />
-            <element signature="e#7294#8654#0" expanded="true" />
-            <element signature="e#8649#8650#0" expanded="true" />
-            <element signature="e#8693#10071#0" expanded="true" />
-            <element signature="e#10066#10067#0" expanded="true" />
-            <element signature="e#10169#11630#0" expanded="true" />
-            <element signature="e#11589#11590#0" expanded="true" />
-            <element signature="e#11665#13498#0" expanded="true" />
-            <element signature="e#11841#11868#0" expanded="true" />
-            <element signature="e#11909#13234#0" expanded="true" />
-            <element signature="e#13225#13226#0" expanded="true" />
-            <element signature="e#13268#13296#0" expanded="true" />
-            <element signature="e#13492#13493#0" expanded="true" />
-            <element signature="e#13552#14538#0" expanded="true" />
-            <element signature="e#13788#13806#0" expanded="true" />
-            <element signature="e#14108#14136#0" expanded="true" />
-            <element signature="e#14162#14478#0" expanded="true" />
-            <element signature="e#14451#14452#0" expanded="true" />
-            <element signature="e#14526#14527#0" expanded="true" />
-            <element signature="e#15448#15469#0" expanded="true" />
-            <element signature="e#15475#15495#0" expanded="true" />
-            <element signature="e#20323#20367#0" expanded="true" />
-            <element signature="e#23241#23272#0" expanded="true" />
-            <element signature="e#24768#24800#0" expanded="true" />
-            <element signature="e#24806#24969#0" expanded="true" />
-            <element signature="e#24962#24963#0" expanded="true" />
-            <element signature="e#25228#32916#0" expanded="true" />
-            <element signature="e#32902#32903#0" expanded="true" />
+            <element signature="e#7018#7034#0" expanded="true" />
+            <element signature="e#7418#8778#0" expanded="true" />
+            <element signature="e#8773#8774#0" expanded="true" />
+            <element signature="e#8817#10195#0" expanded="true" />
+            <element signature="e#10190#10191#0" expanded="true" />
+            <element signature="e#10293#13551#0" expanded="true" />
+            <element signature="e#11955#13403#0" expanded="true" />
+            <element signature="e#13346#13347#0" expanded="true" />
+            <element signature="e#13510#13511#0" expanded="true" />
+            <element signature="e#13586#15664#0" expanded="true" />
+            <element signature="e#13762#13789#0" expanded="true" />
+            <element signature="e#13830#15262#0" expanded="true" />
+            <element signature="e#15253#15254#0" expanded="true" />
+            <element signature="e#15296#15324#0" expanded="true" />
+            <element signature="e#15658#15659#0" expanded="true" />
+            <element signature="e#15718#16704#0" expanded="true" />
+            <element signature="e#15954#15972#0" expanded="true" />
+            <element signature="e#16274#16302#0" expanded="true" />
+            <element signature="e#16328#16644#0" expanded="true" />
+            <element signature="e#16617#16618#0" expanded="true" />
+            <element signature="e#16692#16693#0" expanded="true" />
+            <element signature="e#17614#17635#0" expanded="true" />
+            <element signature="e#17641#17661#0" expanded="true" />
+            <element signature="e#22525#22569#0" expanded="true" />
+            <element signature="e#25443#25474#0" expanded="true" />
+            <element signature="e#26970#27002#0" expanded="true" />
+            <element signature="e#27008#27171#0" expanded="true" />
+            <element signature="e#27164#27165#0" expanded="true" />
+            <element signature="e#27430#35188#0" expanded="true" />
+            <element signature="e#35174#35175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/editdrinktarget.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.807692" vertical-offset="467" max-vertical-offset="1620">
+          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/healthtapper/waterbalance/NotificationDisplayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="645">
+          <caret line="45" column="66" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main1.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48478702" vertical-offset="1126" max-vertical-offset="3630">
+          <caret line="91" column="40" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
+          <folding>
+            <element signature="e#784#819#0" expanded="true" />
+            <element signature="e#853#888#0" expanded="true" />
+            <element signature="e#2529#2550#0" expanded="true" />
+            <element signature="e#5803#5832#0" expanded="true" />
+            <element signature="e#6447#6463#0" expanded="true" />
+            <element signature="e#6986#7003#0" expanded="true" />
+            <element signature="e#8296#8319#0" expanded="true" />
           </folding>
         </state>
       </provider>

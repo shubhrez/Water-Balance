@@ -93,6 +93,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	public static final String HEIGHT_KEY_INCH = "heightKeyInInch";
 	public static final String AMOUNTDRUNK = "amountDrunkKey";
 	public static final String TARGETDRUNK = "targetDrunkKey";
+    public static final String EDITTARGETDRUNK = "edittargetDrunkKey";
 	public static final String NOTIFICATION = "notificationkey";
 	public static final String HOTDAY = "hotdaykey";
 	public static final String WORKOUT = "workoutkey";
@@ -109,9 +110,10 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	static Integer heightInInch;
 
 	Integer amountDrunk;
-	Integer targetWater;
+	Integer targetWater,edittargetwater;
 	static TextView bodyMassIndex, bodyMassIndexTip,drinkTarget;
-    TextView adjustDrinkTargetText,hotdayText,workoutText,addWaterText;
+    TextView adjustDrinkTargetText,hotdayText,workoutText,addWaterText,drinktarget;
+    EditText adjustment;
     private static TextView waterDrunkVsTarget;
 	static Button hotday_button, workout_button,unitConventionButton;
 
@@ -275,12 +277,32 @@ public class MainActivity extends Activity implements OnItemClickListener {
                                               AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                                               builder.setCancelable(true);
                                               builder.setView(layout);
-                                              //               unlocktext = (TextView) layout.findViewById(R.id.unlocktext);
+                                              targetAmountOfWater = pref.getInt(TARGETDRUNK,
+                                                      0);
+                                              amountOfWaterDrunk = pref.getInt(AMOUNTDRUNK,
+                                                      0);
+                                              drinktarget = (TextView) layout.findViewById(R.id.drinktarget);
+                                              adjustment = (EditText) layout.findViewById(R.id.adjustment);
+                                              drinktarget.setText(String.valueOf(targetAmountOfWater));
+                                              adjustment.setText(String.valueOf(pref.getInt(EDITTARGETDRUNK,
+                                                      0)));
+//                                              Integer.parseInt(adjustment.getText().toString());
                                               builder.setPositiveButton("Add",
                                                       new DialogInterface.OnClickListener() {
                                                           @Override
                                                           public void onClick(DialogInterface dialog,
                                                                               int which) {
+
+                                                              SharedPreferences.Editor editor = pref.edit();
+                                                              editor.putInt(EDITTARGETDRUNK,Integer.parseInt(adjustment.getText().toString()));
+                                                              editor.commit();
+
+                                                               waterDrunkProgressBar
+                                                                      .setProgress(amountOfWaterDrunk);
+                                                              waterDrunkProgressBar
+                                                                      .setMax((targetAmountOfWater + Integer.parseInt(adjustment.getText().toString())));
+                                                              waterDrunkVsTarget.setText(amountOfWaterDrunk + "/"
+                                                                      + (targetAmountOfWater + Integer.parseInt(adjustment.getText().toString())) + " ML");
 
                                                           }
                                                       });
@@ -313,14 +335,14 @@ public class MainActivity extends Activity implements OnItemClickListener {
 								waterDrunkProgressBar
 										.setProgress(amountOfWaterDrunk);
 								waterDrunkProgressBar
-										.setMax(targetAmountOfWater * 100);
+										.setMax((targetAmountOfWater + pref.getInt(EDITTARGETDRUNK, 0))* 100);
 								SharedPreferences.Editor editor = pref.edit();
 								targetAmountOfWater = pref.getInt(TARGETDRUNK,
 										0);
 								waterDrunkVsTarget.setText(amountOfWaterDrunk
-										+ "/" + targetAmountOfWater + " ML");
+										+ "/" + (targetAmountOfWater + pref.getInt(EDITTARGETDRUNK, 0)) + " ML");
 								dialog.cancel();
-								if (amountOfWaterDrunk >= targetAmountOfWater) {
+								if (amountOfWaterDrunk >= (targetAmountOfWater + pref.getInt(EDITTARGETDRUNK, 0))) {
 									Toast.makeText(
 											getApplicationContext(),
 											"Congratulations, Daily Goal Reached",
@@ -332,14 +354,14 @@ public class MainActivity extends Activity implements OnItemClickListener {
 						});
 
 				builder.setNegativeButton(R.string.addWaterAlertButton,
-						new DialogInterface.OnClickListener() {
+                        new DialogInterface.OnClickListener() {
 
-							@Override
-							public void onClick(DialogInterface dialog,
-									int which) {
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which) {
 
-							}
-						});
+                            }
+                        });
 
                 builder.show();
 
@@ -504,7 +526,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		pref = context.getSharedPreferences(PREF_NAME,
 				Context.MODE_MULTI_PROCESS);
 		int dt = pref.getInt(TARGETDRUNK, 0);
-		return dt;
+		return (dt + pref.getInt(EDITTARGETDRUNK, 0));
 	}
 
 	public static int returnHeight(Context context) {
@@ -743,8 +765,8 @@ public class MainActivity extends Activity implements OnItemClickListener {
                                     targetAmountOfWater);
                             editor.commit();
                             waterDrunkVsTarget.setText(amountOfWaterDrunk + "/"
-                                    + targetAmountOfWater + " ML");
-                            waterDrunkProgressBar.setMax(targetAmountOfWater);
+                                    + (targetAmountOfWater + pref.getInt(EDITTARGETDRUNK, 0)) + " ML");
+                            waterDrunkProgressBar.setMax(targetAmountOfWater + pref.getInt(EDITTARGETDRUNK, 0));
                             waterDrunkProgressBar.setProgress(amountOfWaterDrunk);
                             dialog.dismiss();
     //2                        setBMI();
@@ -846,9 +868,9 @@ public class MainActivity extends Activity implements OnItemClickListener {
 		amountOfWaterDrunk = pref.getInt(AMOUNTDRUNK, 0);
 		targetAmountOfWater = pref.getInt(TARGETDRUNK, 0);
 		MainActivity.waterDrunkProgressBar.setProgress(amountOfWaterDrunk);
-		MainActivity.waterDrunkProgressBar.setMax(targetAmountOfWater);
+		MainActivity.waterDrunkProgressBar.setMax(targetAmountOfWater + pref.getInt(EDITTARGETDRUNK, 0));
 		waterDrunkVsTarget.setText(amountOfWaterDrunk + "/"
-				+ targetAmountOfWater + " ML");
+				+ (targetAmountOfWater + pref.getInt(EDITTARGETDRUNK, 0)) + " ML");
 	}
 
 }

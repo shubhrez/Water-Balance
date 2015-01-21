@@ -12,6 +12,7 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
 
@@ -35,12 +36,15 @@ public class NotificationDisplayer extends BroadcastReceiver {
 			Notification notification = new Notification.Builder(context)
 					.setTicker("Notification")
 					.setSmallIcon(R.drawable.notifyicon)
-					.setContentTitle("Reminder to Drink Water")
+					.setContentTitle("Reminder from Water Balance")
 					.setContentIntent(contentIntent)
 					.setAutoCancel(true)
 					.setWhen(System.currentTimeMillis())
-					.setContentText("Time to wet your body").build();
-			notification.defaults |= Notification.DEFAULT_SOUND;
+					.setContentText("Time to drink water").build();
+            notification.sound = Uri.parse("android.resource://"
+                    + context.getPackageName() + "/" + R.raw.waterfilling);
+            notification.defaults |= Notification.DEFAULT_VIBRATE;
+	//		notification.defaults |= Notification.DEFAULT_SOUND;
 			notifictionManager.notify(1, notification);
 		}
 	}
